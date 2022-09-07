@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:weightSum="4"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_landing_topLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:background="@drawable/img5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.4"
+            android:layout_alignBottom="@+id/iv_landing_mock_first"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/iv_landing_mock_first"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/androidmockup4"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_305dp"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_landing_label5"
+        android:layout_marginBottom="@dimen/dimen_35dp"
+        android:textColor="@color/vehicle_unselect_color"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_below="@+id/rl_landing_topLayout"
+        android:text="@string/slide_labe5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+

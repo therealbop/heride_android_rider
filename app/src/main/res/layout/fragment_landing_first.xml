@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--android:background="@drawable/buildings_android"-->
+    <RelativeLayout
+        android:id="@+id/rl_landing_topLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/iv_landing_mock_first"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_225dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_40dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/help_logo" />
+
+        <ImageView
+            android:layout_marginTop="105dp"
+            android:background="@drawable/img1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.4"
+            android:contentDescription="@string/app_name" />
+
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/dimen_n35dp"
+            android:layout_marginLeft="@dimen/dimen_n50dp"
+            android:id="@+id/rv_landing_car"
+            android:layout_below="@+id/iv_landing_mock_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_n50dp">
+
+            <ImageView
+                android:id="@+id/iv_landing_car"
+                android:src="@drawable/car"
+                android:layout_width="@dimen/dimen_130dp"
+                android:layout_height="@dimen/dimen_120dp"
+                android:contentDescription="@string/app_name" />
+            <ImageView
+                android:id="@+id/iv_landing_tireBack"
+                android:layout_marginLeft="@dimen/dimen_18dp"
+                android:layout_marginTop="@dimen/dimen_61dp"
+                android:src="@drawable/tire"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:contentDescription="@string/app_name"
+                android:layout_marginStart="@dimen/dimen_18dp" />
+
+            <ImageView
+                android:id="@+id/iv_landing_tireFront"
+                android:layout_marginLeft="@dimen/dimen_93dp"
+                android:layout_marginTop="@dimen/dimen_61dp"
+                android:src="@drawable/tire"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:contentDescription="@string/app_name"
+                android:layout_marginStart="@dimen/dimen_93dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_landing_label1"
+        android:layout_marginBottom="@dimen/dimen_35dp"
+        android:textColor="@color/vehicle_unselect_color"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_below="@+id/rl_landing_topLayout"
+        android:text="@string/slide_labe1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

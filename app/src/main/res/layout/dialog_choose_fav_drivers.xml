@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_home_fav_header"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:textColor="@color/vehicle_unselect_color"
+        android:textSize="@dimen/text_size_18sp"
+        android:text="@string/whom_will_ride"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:background="@color/divider_invoice3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"/>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_fav_drivers_list"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <View
+        android:background="@color/divider_invoice3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        android:layout_height="@dimen/dimen_1dp"/>
+
+    <Button
+        android:id="@+id/btn_home_fav_drivers_confirm"
+        android:textSize="@dimen/text_size_18sp"
+        android:textColor="@color/order_status"
+        android:text="@string/next"
+        android:background="@drawable/selector_white_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

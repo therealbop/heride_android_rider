@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_white_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_cancel_reason_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        android:layout_margin="@dimen/dimen_1dp"
+        android:background="@color/driver_details">
+
+        <TextView
+            android:id="@+id/tv_cancel_reason_title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_booking"
+            android:gravity="center"
+            android:textColor="@color/vehicle_unselect_color"
+            android:textSize="@dimen/text_size_15sp"/>
+
+        <TextView
+            android:id="@+id/tv_cancel_reason_title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_9sp"
+            android:textColor="@color/cancel_hint"
+            android:text="@string/cancel_hint"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/tv_alert_divider1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/divider_invoice3"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cancel_reasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <View
+        android:id="@+id/tv_alert_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/divider_invoice3"/>
+
+    <LinearLayout
+        android:id="@+id/ll_cancel_reasons_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_margin="@dimen/dimen_1dp">
+
+        <TextView
+            android:id="@+id/tv_alert_yes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.99"
+            android:textSize="@dimen/text_size_13sp"
+            android:textColor="@color/order_status"
+            android:gravity="center"
+            android:text="@string/dont_cancel_ride"
+            android:background="@drawable/selector_white_layout"
+            android:padding="@dimen/dimen_14dp" />
+
+        <View
+            android:layout_width="@dimen/dimen_1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:background="@color/divider1"/>
+
+        <TextView
+            android:id="@+id/tv_alert_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.99"
+            android:textSize="@dimen/text_size_13sp"
+            android:textColor="@color/darkGray"
+            android:gravity="center"
+            android:enabled="false"
+            android:text="@string/cancel_ride"
+            android:background="@drawable/selector_white_layout"
+            android:padding="@dimen/dimen_14dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white_smoke"
+    android:isScrollContainer="true">
+    <!--Custom toolbar-->
+    <include android:id="@+id/rl_action_bar"
+        layout="@layout/layout_custom_action_bar">
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_action_bar"
+        android:layout_above="@+id/btn_edit_name_save">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:id="@+id/rl_edit_name_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Email Editing info-->
+            <TextView
+                android:id="@+id/tv_edit_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/dimen_30dp"
+                android:layout_marginLeft="@dimen/dimen_30dp"
+                android:layout_marginRight="@dimen/dimen_30dp"
+                android:layout_marginStart="@dimen/dimen_30dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:paddingLeft="@dimen/dimen_3dp"
+                android:paddingStart="@dimen/dimen_3dp"
+                android:paddingRight="@dimen/dimen_0dp"
+                android:paddingEnd="@dimen/dimen_0dp"
+                android:paddingTop="@dimen/dimen_20dp"
+                android:text="@string/enter_new_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textsize_15_74sp" />
+
+            <!--Name Id-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_edit_name_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_edit_name_title"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_30dp"
+                android:layout_marginLeft="@dimen/dimen_30dp"
+                android:layout_marginRight="@dimen/dimen_30dp"
+                android:layout_marginStart="@dimen/dimen_30dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_edit_name_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:textDirection="locale"
+                    android:gravity="start"
+                    android:textAlignment="viewStart"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="30"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:textSize="@dimen/textsize_15_74sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/light_shadow"
+                android:visibility="visible" />
+            <!--Save button -->
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:textAllCaps="false"
+        android:id="@+id/btn_edit_name_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_bg"
+        android:text="@string/save"
+        android:enabled="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18sp" />
+
+</RelativeLayout>
+
+<!--                app:hintTextAppearance="@style/MyAppearance"
+                android:theme="@style/TextLabel"-->

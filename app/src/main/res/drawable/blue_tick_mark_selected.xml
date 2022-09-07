@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32.0"
+    android:viewportHeight="32.0">
+    <path
+        android:pathData="M16.01,8.31a7.68,7.68 0,1 0,7.68 7.68A7.69,7.69 0,0 0,16.01 8.31ZM20.29,13.43 L15.57,18.75a0.59,0.59 0,0 1,-0.44 0.2,0.59 0.59,0 0,1 -0.37,-0.13l-2.95,-2.36a0.59,0.59 0,0 1,0.74 -0.92l2.52,2.01 4.35,-4.9A0.59,0.59 0,0 1,20.29 13.43Z"
+        android:fillType="evenOdd"
+        android:fillColor="@color/rent_car_blue"/>
+</vector>

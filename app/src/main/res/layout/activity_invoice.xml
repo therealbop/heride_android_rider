@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/divider_invoice2"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ll_invoice_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginBottom="@dimen/dimen_5dp">
+            <TextView
+                android:id="@+id/tv_invoice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_trip"
+                android:textSize="@dimen/text_size_15sp"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/tv_invoice_appnt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_13sp"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_invoice_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_10dp"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_16sp"
+        android:background="@drawable/selector_layout"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"/>
+
+    <!-- MAIN LAYOUT-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_invoice_action_bar"
+        android:layout_above="@id/btn_invoice_submit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:layout_marginBottom="@dimen/dimen_10dp"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginStart="@dimen/dimen_20dp"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_marginEnd="@dimen/dimen_10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_invoice_driver_pic"
+                            android:layout_width="@dimen/dimen_50dp"
+                            android:layout_height="@dimen/dimen_50dp"
+                            android:src="@drawable/signup_profile_default_image"
+                            android:contentDescription="@string/app_name" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_invoice_progress"
+                            android:layout_width="@dimen/dimen_20dp"
+                            android:layout_height="@dimen/dimen_20dp"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center|start">
+
+                        <TextView
+                            android:id="@+id/tv_invoice_driver_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_15sp"
+                            android:textColor="@color/vehicle_unselect_color" />
+
+                        <TextView
+                            android:id="@+id/tv_invoice_vehicle_model"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-3dp"
+                            android:textSize="@dimen/text_size_12sp"
+                            android:textColor="@color/address_grey_color" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_invoice_booking_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginEnd="@dimen/dimen_20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tv_invoice_receipt"
+                        android:layout_toStartOf="@+id/tv_invoice_receipt"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_invoice_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_40sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_2dp"
+                            android:layout_marginStart="@dimen/dimen_2dp">
+
+                            <TextView
+                                android:id="@+id/tv_invoice_distance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/text_size_11sp"/>
+
+                            <View
+                                android:layout_width="@dimen/dimen_1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dimen_8dp"
+                                android:layout_marginStart="@dimen/dimen_8dp"
+                                android:layout_marginRight="@dimen/dimen_8dp"
+                                android:layout_marginEnd="@dimen/dimen_8dp"
+                                android:background="@color/divider_invoice"/>
+
+                            <TextView
+                                android:id="@+id/tv_invoice_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/text_size_11sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_invoice_receipt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/receipt"
+                        android:layout_centerVertical="true"
+                        android:paddingTop="@dimen/dimen_5dp"
+                        android:paddingBottom="@dimen/dimen_5dp"
+                        android:paddingRight="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:textColor="@color/order_status"
+                        android:textSize="@dimen/text_size_13sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/shape_rectangle_lgray"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_invoice_tip_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginRight="@dimen/dimen_20dp"
+                        android:layout_marginEnd="@dimen/dimen_20dp"
+                        android:layout_marginStart="@dimen/dimen_20dp"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:background="@color/divider_invoice3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_invoice_rate_tip_label"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:textColor="@color/vehicle_unselect_color"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/leave_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_invoice_rating_tip"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginBottom="@dimen/dimen_10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_15dp"
+                android:background="@drawable/tooth_bottom"/>
+
+            <!-- RATE THE DRIVER -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_invoice_rating_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rate_driver"
+                    android:textColor="@color/vehicle_unselect_color"
+                    android:gravity="start"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_size_14sp" />
+
+                <RatingBar
+                    android:id="@+id/rb_invoice_rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar"
+                    android:rating="5"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tv_invoice_feedback_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/rating_5"
+                    android:textColor="@color/SignInbuttonGradStart12cca2"
+                    android:textSize="@dimen/text_size_15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_invoice_fav_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_fav"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_5dp"
+                    android:paddingBottom="@dimen/dimen_5dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingEnd="@dimen/dimen_10dp"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:textColor="@color/order_status"
+                    android:textSize="@dimen/text_size_13sp"
+                    android:background="@drawable/bg_fav_driver_border"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginEnd="@dimen/dimen_20dp">
+
+                    <TextView
+                        android:id="@+id/tv_invoice_feedback_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rating_desc_5"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dimen_15dp"
+                        android:layout_marginStart="@dimen/dimen_15dp"
+                        android:layout_marginRight="@dimen/dimen_15dp"
+                        android:layout_marginEnd="@dimen/dimen_15dp"
+                        android:textColor="@color/text_color_rate"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:background="@color/divider_invoice3"
+                        android:layout_toLeftOf="@+id/tv_invoice_feedback_description"
+                        android:layout_toStartOf="@+id/tv_invoice_feedback_description"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:background="@color/divider_invoice3"
+                        android:layout_toRightOf="@+id/tv_invoice_feedback_description"
+                        android:layout_toEndOf="@+id/tv_invoice_feedback_description"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_invoice_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:paddingStart="@dimen/dimen_20dp"
+                android:paddingRight="@dimen/dimen_15dp"
+                android:paddingEnd="@dimen/dimen_15dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dimen_15dp"
+                android:paddingStart="@dimen/dimen_15dp"
+                android:paddingRight="@dimen/dimen_15dp"
+                android:paddingEnd="@dimen/dimen_15dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_invoice_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/leave_comment"
+                    android:textSize="@dimen/text_size_13sp"
+                    android:textColor="@color/vehicle_unselect_color"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

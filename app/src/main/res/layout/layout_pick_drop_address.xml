@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_15dp">
+
+        <LinearLayout
+            android:id="@+id/ll_pick_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_10dp"
+                android:layout_height="@dimen/dimen_10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_box_square_green"
+                android:rotation="45" />
+
+            <TextView
+                android:id="@+id/tv_pick_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15dp"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_14sp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:hint="@string/fetching_location"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_drop_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_pick_address"
+            android:layout_marginTop="@dimen/dimen_15dp">
+
+            <View
+                android:id="@+id/vw_address_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginLeft="@dimen/dimen_25dp"
+                android:layout_marginStart="@dimen/dimen_25dp"
+                android:background="@color/divider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_below="@id/vw_address_divider">
+
+                <ImageView
+                    android:id="@+id/iv_drop_address_icon"
+                    android:layout_width="@dimen/dimen_10dp"
+                    android:layout_height="@dimen/dimen_10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_box_square_red"
+                    android:rotation="45" />
+
+                <TextView
+                    android:id="@+id/tv_drop_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_15dp"
+                    android:layout_marginStart="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_drop_address_icon"
+                    android:layout_toEndOf="@+id/iv_drop_address_icon"
+                    android:layout_toLeftOf="@+id/ll_address_drop_change"
+                    android:layout_toStartOf="@+id/ll_address_drop_change"
+                    android:focusableInTouchMode="true"
+                    android:freezesText="true"
+                    android:hint="@string/not_added_drop"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_address_drop_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true">
+
+                    <View
+                        android:layout_width="@dimen/dimen_1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"
+                        android:background="@color/divider"/>
+
+                    <TextView
+                        android:id="@+id/tv_drop_address_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/selector_white_layout"
+                        android:textColor="@color/order_status"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:text="@string/change"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

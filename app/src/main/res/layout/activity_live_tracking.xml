@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.karru.booking_flow.ride.live_tracking.view.LiveTrackingActivity">
+
+    <include
+        android:id="@+id/tb_live_tracking_pick"
+        layout="@layout/layout_custom_action_bar" />
+
+    <include
+        android:id="@+id/cv_live_tracking_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tb_live_tracking_pick"
+        layout="@layout/layout_pick_drop_address"/>
+
+    <fragment
+        android:id="@+id/frag_live_tracking_map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rl_live_tracking_details"
+        app:layout_constraintTop_toBottomOf="@+id/cv_live_tracking_address"
+        class="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <ImageView
+        android:id="@+id/iv_live_tracking_curr_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_10dp"
+        android:src="@drawable/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rl_live_tracking_details"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_live_tracking_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_rental_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dimen_5dp"
+            android:textSize="@dimen/text_size_15sp"
+            android:visibility="gone"
+            android:textColor="@color/grayTextColor"
+            android:text="@string/rental_details"/>
+
+        <TextView
+            android:id="@+id/tv_rental_details_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rental_detail"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_size_15sp"
+            android:visibility="gone"
+            android:textColor="@color/grayTextColor"
+            android:text="@string/rental_details"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_live_tracking_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rental_details_info"
+            android:paddingLeft="@dimen/dimen_18dp"
+            android:paddingStart="@dimen/dimen_18dp"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_12dp">
+
+            <TextView
+                android:id="@+id/tv_live_tracking_bid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/text_color_rate"
+                android:textSize="@dimen/text_size_11sp" />
+
+            <TextView
+                android:id="@+id/tv_live_tracking_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="@dimen/text_size_11sp"
+                android:textColor="@color/text_color_rate" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_live_tracking_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_15dp"
+            android:baselineAligned="false"
+            android:layout_below="@+id/rl_live_tracking_top"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rl_live_tracking_driver_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_live_tracking_driver_pic"
+                        android:layout_width="@dimen/dimen_45dp"
+                        android:layout_height="@dimen/dimen_45dp"
+                        android:src="@drawable/signup_profile_default_image" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_live_tracking_driver_pic"
+                        android:layout_width="@dimen/dimen_20dp"
+                        android:layout_height="@dimen/dimen_20dp"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingEnd="@dimen/dimen_10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_live_tracking_driver_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textColor="@color/grayTextColor"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_live_tracking_driver_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:drawableRight="@drawable/ic_star_yellow_selector"
+                        android:drawableEnd="@drawable/ic_star_yellow_selector"
+                        android:textColor="@color/grayTextColor"
+                        android:textSize="@dimen/text_size_12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/rl_live_tracking_vehicle_pic"
+                    android:layout_toStartOf="@+id/rl_live_tracking_vehicle_pic"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingEnd="@dimen/dimen_10dp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/tv_live_tracking_car_plate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textDirection="locale"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/grayTextColor"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_live_tracking_car_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textDirection="locale"
+                        android:textAlignment="viewEnd"
+                        android:maxLines="1"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:textColor="@color/address_grey_color"
+                        android:textSize="@dimen/text_size_12sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_live_tracking_vehicle_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true">
+
+                    <ImageView
+                        android:id="@+id/iv_live_tracking_vehicle_pic"
+                        android:layout_width="@dimen/dimen_45dp"
+                        android:layout_height="@dimen/dimen_45dp"
+                        android:src="@drawable/signup_profile_default_image" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_live_tracking_vehicle_pic"
+                        android:layout_width="@dimen/dimen_20dp"
+                        android:layout_height="@dimen/dimen_20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vw_live_tracking_view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/divider_invoice"
+            android:layout_below="@+id/ll_live_tracking_details"/>
+
+        <LinearLayout
+            android:id="@+id/ll_live_tracking_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:weightSum="4"
+            android:layout_below="@+id/vw_live_tracking_view1">
+
+            <TextView
+                android:id="@+id/tv_live_tracking_call"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_white_layout"
+                android:drawableTop="@drawable/ic_live_track_call_icon_off_selector"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5dp"
+                android:text="@string/call"
+                android:textColor="@color/text_color_rate"
+                android:textSize="@dimen/text_size_10sp" />
+
+            <TextView
+                android:id="@+id/tv_live_tracking_chat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_white_layout"
+                android:drawableTop="@drawable/chat_icon_selector"
+                android:text="@string/chat"
+                android:gravity="center"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text_color_rate"
+                android:textSize="@dimen/text_size_10sp" />
+
+            <TextView
+                android:id="@+id/tv_live_tracking_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_white_layout"
+                android:drawableTop="@drawable/ic_live_track_cancel_icon_off_selector"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5dp"
+                android:text="@string/cancel"
+                android:textColor="@color/text_color_rate"
+                android:textSize="@dimen/text_size_10sp" />
+
+            <TextView
+                android:id="@+id/tv_live_tracking_share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_white_layout"
+                android:drawableTop="@drawable/ic_live_track_share_eta_icon_off_selector"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5dp"
+                android:text="@string/share_eta"
+                android:textColor="@color/text_color_rate"
+                android:textSize="@dimen/text_size_10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_menu_nav_home"
+        android:icon="@drawable/menu_book_a_ride"
+        android:title="@string/book_runner"
+        android:checked="true"/>
+    <item
+        android:id="@+id/item_menu_nav_order"
+        android:icon="@drawable/menu_history"
+        android:title="@string/my_bookings" />
+    <item
+        android:id="@+id/item_menu_nav_favorite"
+        android:icon="@drawable/menu_favorites"
+        android:title="@string/favorites" />
+    <item
+        android:id="@+id/item_menu_nav_payment"
+        android:icon="@drawable/menu_payments"
+        android:title="@string/payments" />
+    <item
+        android:id="@+id/item_menu_nav_wallet"
+        android:icon="@drawable/menu_wallet"
+        android:title="@string/wallet"
+        android:visible="false"/>
+    <item
+        android:id="@+id/item_menu_nav_corporate"
+        android:icon="@drawable/menu_corporate"
+        android:title="@string/corporate" />
+    <item
+        android:id="@+id/item_menu_emergency"
+        android:icon="@drawable/menu_emergency"
+        android:title="@string/emergency" />
+    <item
+        android:id="@+id/item_menu_nav_ratecard"
+        android:icon="@drawable/menu_rate_card"
+        android:title="@string/rate_card" />
+    <item
+        android:id="@+id/item_menu_nav_vehicle"
+        android:icon="@drawable/menu_my_vehicles"
+        android:visible="false"
+        android:title="@string/my_vehicles" />
+    <item
+        android:id="@+id/item_menu_nav_support"
+        android:icon="@drawable/menu_support"
+        android:title="@string/support" />
+    <item
+        android:id="@+id/item_menu_nav_about"
+        android:icon="@drawable/menu_about"
+        android:title="@string/about" />
+    <item
+        android:id="@+id/item_menu_nav_invite"
+        android:icon="@drawable/menu_invite"
+        android:title="@string/invite" />
+    <item
+        android:id="@+id/item_menu_nav_liveChat"
+        android:icon="@drawable/menu_live_chat"
+        android:visible="false"
+        android:title="@string/liveChat" />
+    <item
+        android:id="@+id/item_menu_nav_helpCenter"
+        android:icon="@drawable/menu_help_center"
+        android:visible="false"
+        android:title="@string/helpcenter" />
+</menu>

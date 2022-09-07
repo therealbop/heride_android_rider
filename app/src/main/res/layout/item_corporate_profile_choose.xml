@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/rl_corporate_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dimen_10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_corporate_icon"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:src="@drawable/confirmation_personal_icon"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_corporate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_corporate_icon"
+        android:layout_toEndOf="@+id/iv_corporate_icon"
+        android:textColor="@color/vehicle_unselect_color"
+        android:textSize="@dimen/text_size_14sp"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingTop="@dimen/dimen_12dp"
+        android:textDirection="locale"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAlignment="viewStart"
+        android:gravity="center|start"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/check_mark_selector"
+        android:drawableEnd="@drawable/check_mark_selector" />
+</RelativeLayout>

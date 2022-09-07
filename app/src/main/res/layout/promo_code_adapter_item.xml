@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dimen_3dp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_margin="@dimen/dimen_7dp"
+    android:elevation="@dimen/dimen_5dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_10dp"
+    android:padding="@dimen/dimen_10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_promocode_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KARRU7+10"
+        android:textColor="@color/green"
+        android:padding="@dimen/dimen_6dp"
+        android:textSize="@dimen/text_size_16sp"
+        android:background="@drawable/dotted_rectangle_bg"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_promo_code_brif_dis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColor="@color/transparent_black_80"
+            android:text="Upto $10.00 off on 5 Karru 7+ rides!"/>
+
+        <TextView
+            android:id="@+id/tv_term_and_condition"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textSize="@dimen/text_size_12sp"
+            android:text="@string/t_amp_c"
+            android:visibility="visible"
+            android:textColor="@color/livemblue3498" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_promo_code_full_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="@dimen/text_size_13sp" />
+    <TextView
+        android:id="@+id/tv_view_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="-4dp"
+        android:lineSpacingExtra="@dimen/dimen_1dp"
+        android:textSize="@dimen/text_size_12sp"
+        android:visibility="gone"
+        android:textColor="@color/livemblue3498" />
+
+    <View
+        android:id="@+id/vw_promo_code_divider"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginBottom="@dimen/dimen_8dp"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/divider_invoice3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tv_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/separator" />
+
+        <TextView
+            android:layout_toRightOf="@id/tv_separator"
+            android:id="@+id/tv_promo_expire_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 March 2018"
+            android:layout_toEndOf="@id/tv_separator"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_5dp" />
+
+        <TextView
+            android:id="@+id/tv_promo_code_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/apply"
+            android:textColor="@color/livemblue3498"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorfafafa"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_custom_action_bar" />
+
+    <TextView
+        android:id="@+id/tv_rate_card_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_25dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginStart="@dimen/dimen_25dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:text="@string/select_city"
+        android:textAllCaps="true"
+        android:textColor="@color/brown"
+        android:textSize="@dimen/text_size_10sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spnr_rate_card_city"
+            style="@style/SpinnerTheme"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textDirection="locale"
+            android:textAlignment="viewStart"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_18dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_18dp"
+            android:spinnerMode="dropdown" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp_selector"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:background="@color/brown"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginEnd="@dimen/dimen_25dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginStart="@dimen/dimen_25dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"/>
+
+    <TextView
+        android:id="@+id/tv_rate_card_vehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_25dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginStart="@dimen/dimen_25dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:text="@string/select_vehicle"
+        android:textAllCaps="true"
+        android:textColor="@color/brown"
+        android:textSize="@dimen/text_size_10sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spnr_rate_card_vehicle"
+            style="@style/SpinnerTheme"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textDirection="locale"
+            android:textAlignment="viewStart"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_18dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_18dp"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp_selector"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_rate_card_vehicle_line"
+        android:background="@color/brown"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginEnd="@dimen/dimen_25dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginStart="@dimen/dimen_25dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:background="@drawable/top_bottom_border" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dimen_100dp"
+        android:id="@+id/ll_rate_card_empty"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            app:srcCompat="@drawable/ic_my_trips_blank_empty_iocn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingPrefix" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_rate_card_child_empty"
+            android:text="@string/empty_message"
+            android:textSize="@dimen/text_size_16sp"
+            android:textColor="@color/brown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_rate_card_det"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/iv_rc_vehicleImage"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="@dimen/dimen_60dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_marginStart="@dimen/dimen_5dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingStart="@dimen/dimen_5dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingEnd="@dimen/dimen_5dp">
+
+                <TextView
+                    android:id="@+id/tv_rate_item_vehicle_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_rate_card_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_25dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_size_13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_25dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_rate_card_min_text"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/min_fare"
+                android:gravity="start|center"
+                android:textDirection="locale"
+                android:textAlignment="viewStart"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/colon"
+                android:textDirection="locale"
+                android:textAlignment="viewStart"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <TextView
+                android:id="@+id/tv_rate_card_minFare_val"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="end"
+                android:textDirection="locale"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_25dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_rate_card_base_text"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/baseFare"
+                android:gravity="start|center"
+                android:textDirection="locale"
+                android:textAlignment="viewStart"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/colon"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <TextView
+                android:id="@+id/tv_rate_card_base_value"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="end"
+                android:textDirection="locale"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_25dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_rate_card_60min_label"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="start|center"
+                android:textDirection="locale"
+                android:textAlignment="viewStart"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/colon"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_rate_card_60min_val"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="end"
+                android:textDirection="locale"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_25dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_rate_card_2mil_label"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="start|center"
+                android:textDirection="locale"
+                android:textAlignment="viewStart"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/colon"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_rate_card_2mil_val"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="end"
+                android:textDirection="locale"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_25dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_waiting_fee_text"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/waiting_fare"
+                android:gravity="start|center"
+                android:textDirection="locale"
+                android:textAlignment="viewStart"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/colon"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_waiting_fee_value"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="end"
+                android:textDirection="locale"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_25dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_rate_card_lbh_label"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/l_b_h"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/colon"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <TextView
+                android:id="@+id/tv_rate_card_lbh_val"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="start|center"
+                android:textDirection="locale"
+                android:textAlignment="viewStart"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_25dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_25dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:weightSum ="10">
+
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="start|center"
+                android:textDirection="locale"
+                android:textAlignment="viewStart"
+                android:text="@string/capacity"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/colon"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_rate_card_capacity"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="end"
+                android:textDirection="locale"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

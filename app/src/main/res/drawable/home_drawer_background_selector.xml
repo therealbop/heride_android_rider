@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:autoMirrored="true">
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:bottomRightRadius="20dp"
+                android:topRightRadius="20dp">
+            </corners>
+            <gradient
+                android:startColor="@color/white"
+                android:endColor="@color/white" />
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_home_vehicle_type"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dimen_5dp"
+    android:paddingBottom="@dimen/dimen_5dp"
+    android:layout_centerVertical="true"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_home_vehicle_eta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_drivers"
+        android:textSize="@dimen/text_size_8sp"
+        android:maxLines="1"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/vehicle_unselect_color"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:id="@+id/rlVehicleImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_home_vehicle_eta"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/iv_home_vehicle_image_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/iv_home_vehicle_image_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_home_vehicle_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/vehicle_unselect_color"
+        android:layout_below="@+id/rlVehicleImages"
+        android:textSize="@dimen/text_size_8sp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:gravity="start|center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"/>
+</RelativeLayout>

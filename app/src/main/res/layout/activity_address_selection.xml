@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorececec">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:padding="@dimen/dimen_10dp"
+                    app:srcCompat="@drawable/ic_book_a_truck_back_icon"
+                    android:background="@drawable/selector_white_layout" />
+
+                <TextView
+                    android:id="@+id/tv_all_tool_bar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/text_size_19sp"
+                    android:maxLines="1"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimary"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_35dp"
+                android:layout_marginLeft="@dimen/dimen_15dp"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:layout_marginRight="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:background="@color/address_drop_color">
+
+                <ImageView
+                    android:id="@+id/iv_select_address_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_close_grey" />
+
+                <ImageView
+                    android:id="@+id/iv_select_address_type"
+                    android:layout_width="@dimen/dimen_10dp"
+                    android:layout_height="@dimen/dimen_10dp"
+                    android:src="@drawable/shape_box_square_green"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:rotation="45" />
+
+                <EditText
+                    android:id="@+id/et_select_address_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/iv_select_address_clear"
+                    android:layout_toStartOf="@+id/iv_select_address_clear"
+                    android:layout_toRightOf="@+id/iv_select_address_type"
+                    android:layout_toEndOf="@+id/iv_select_address_type"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/ic_search_black_24dp_selector"
+                    android:drawableStart="@drawable/ic_search_black_24dp_selector"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:textColor="@color/select_payment"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingEnd="@dimen/dimen_10dp"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:textDirection="locale"
+                    android:textAlignment="viewStart"
+                    android:gravity="start|center_vertical"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_select_address_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/search_text_color"
+        android:text="@string/select_location_map"
+        android:drawablePadding="@dimen/dimen_15dp"
+        android:padding="@dimen/dimen_8dp"
+        android:gravity="start|center_vertical"
+        android:layout_marginLeft="@dimen/dimen_15dp"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:layout_marginRight="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:textDirection="locale"
+        android:textAlignment="viewStart"
+        android:drawableLeft="@drawable/ic_search_blue_selector"
+        android:drawableStart="@drawable/ic_search_blue_selector"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- RECENT & FAVOURITES LIST -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_address_special"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2dp"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/dimen_20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_15dp"
+                    android:layout_marginStart="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_marginEnd="@dimen/dimen_15dp">
+
+                    <TextView
+                        android:id="@+id/tv_address_special_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:textSize="@dimen/text_size_19sp"
+                        android:text="@string/popular"
+                        android:textDirection="locale"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_address_special_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_select_address_fav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv_address_special"
+                android:layout_marginTop="@dimen/dimen_2dp"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/dimen_20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_15dp"
+                    android:layout_marginStart="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_marginEnd="@dimen/dimen_15dp">
+
+                    <TextView
+                        android:id="@+id/tv_select_address_fav_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:textSize="@dimen/text_size_19sp"
+                        android:text="@string/favourites"
+                        android:textDirection="locale"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_select_address_fav_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_select_address_recent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_select_address_fav"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dimen_15dp"
+                    android:layout_marginStart="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_marginEnd="@dimen/dimen_15dp">
+
+                    <TextView
+                        android:id="@+id/tv_select_address_recent_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:textSize="@dimen/text_size_19sp"
+                        android:textDirection="locale"
+                        android:textAlignment="viewStart"
+                        android:text="@string/recent"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_select_address_recent_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

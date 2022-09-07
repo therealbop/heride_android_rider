@@ -1,0 +1,407 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white"
+    android:focusable="true">
+
+    <!--Add profile pic button-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/include_layout"
+            layout="@layout/layout_profile_action_bar"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_user_profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:layout_marginLeft="@dimen/dimen_15dp"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:clickable="true"
+            android:layout_marginTop="@dimen/dimen_55dp"
+            android:orientation="vertical"
+            android:focusable="true">
+
+            <!--Profile pic-->
+            <RelativeLayout
+                android:id="@+id/rl_profile_profilePic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_profile_profilePic"
+                    android:layout_width="@dimen/dimen_120dp"
+                    android:layout_height="@dimen/dimen_120dp"
+                    android:layout_marginTop="@dimen/dimen_45dp"
+                    android:src="@drawable/signup_profile_default_image"
+                    android:background="@drawable/profile_pic_stroke"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"/>
+
+                <ProgressBar
+                    android:id="@+id/pBar_profileFrag"
+                    android:layout_width="@dimen/dimen_50dp"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:layout_marginTop="@dimen/dimen_80dp"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_addIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/add_profile_pic_selector"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dimen_140dp"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_marginStart="-30dp"
+                    android:layout_toRightOf="@+id/iv_profile_profilePic"
+                    android:layout_toEndOf="@+id/iv_profile_profilePic"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+            <!--Hotel Name-->
+            <RelativeLayout
+                android:id="@+id/rl_hotel_field_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp">
+
+                <ImageView
+                    android:id="@+id/iv_profile_editHotelName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="invisible"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="end|center_vertical"
+                    android:padding="15dp"
+                    app:srcCompat="@drawable/ic_edit_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_editName_profile_hotelName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_toLeftOf="@id/iv_profile_editHotelName"
+                    android:layout_toStartOf="@id/iv_profile_editHotelName"
+                    android:gravity="start|center_vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tv_profile_hotelName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:textDirection="locale"
+                        android:gravity="start|center_vertical"
+                        android:textAlignment="viewStart"
+                        android:hint="@string/hotel_name"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dimen_5dp"
+                        android:paddingBottom="@dimen/dimen_5dp"
+                        android:textColor="@color/color3b3b3b"
+                        android:textSize="@dimen/textsize_15_74sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewHotelDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <!-- NAME -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp">
+
+                <ImageView
+                    android:id="@+id/iv_profile_editName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="end|center_vertical"
+                    android:padding="15dp"
+                    app:srcCompat="@drawable/ic_edit_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_editName_profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_toLeftOf="@id/iv_profile_editName"
+                    android:layout_toStartOf="@id/iv_profile_editName"
+                    android:gravity="start|center_vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:textDirection="locale"
+                        android:gravity="start|center_vertical"
+                        android:textAlignment="viewStart"
+                        android:hint="@string/name"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dimen_5dp"
+                        android:paddingBottom="@dimen/dimen_5dp"
+                        android:textColor="@color/color3b3b3b"
+                        android:textSize="@dimen/textsize_15_74sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <!-- PHONE NUMBER -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp">
+
+                <ImageView
+                    android:id="@+id/iv_profile_phoneNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="end|center_vertical"
+                    android:padding="15dp"
+                    app:srcCompat="@drawable/ic_edit_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_phoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_toLeftOf="@id/iv_profile_phoneNo"
+                    android:layout_toStartOf="@id/iv_profile_phoneNo"
+                    android:gravity="start|center_vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_phoneNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:hint="@string/phone_number"
+                        android:textDirection="locale"
+                        android:gravity="start|center_vertical"
+                        android:textAlignment="viewStart"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dimen_5dp"
+                        android:paddingBottom="@dimen/dimen_5dp"
+                        android:textColor="@color/color3b3b3b"
+                        android:textSize="@dimen/textsize_15_74sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <!-- EMAIL -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp">
+
+                <ImageView
+                    android:id="@+id/iv_profile_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="end|center_vertical"
+                    android:padding="15dp"
+                    app:srcCompat="@drawable/ic_edit_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_toLeftOf="@id/iv_profile_email"
+                    android:layout_toStartOf="@id/iv_profile_email"
+                    android:gravity="start|center_vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:hint="@string/e_mail"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:textDirection="locale"
+                        android:gravity="start|center_vertical"
+                        android:textAlignment="viewStart"
+                        android:paddingTop="@dimen/dimen_5dp"
+                        android:paddingBottom="@dimen/dimen_5dp"
+                        android:textColor="@color/color3b3b3b"
+                        android:textSize="@dimen/textsize_15_74sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+
+            <!-- PASSWORD -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp">
+
+                <ImageView
+                    android:id="@+id/iv_profile_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="end|center_vertical"
+                    android:padding="15dp"
+                    app:srcCompat="@drawable/ic_edit_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_profile_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_toLeftOf="@id/iv_profile_password"
+                    android:layout_toStartOf="@id/iv_profile_password"
+                    android:gravity="start|center_vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_profile_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:textDirection="locale"
+                        android:gravity="start|center_vertical"
+                        android:textAlignment="viewStart"
+                        android:hint="@string/password_cap"
+                        android:inputType="textPassword"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dimen_5dp"
+                        android:paddingBottom="@dimen/dimen_5dp"
+                        android:textColor="@color/color3b3b3b"
+                        android:textSize="@dimen/textsize_15_74sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:id="@+id/rl_landing_languages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:paddingTop="@dimen/dimen_5dp"
+                android:visibility="gone"
+                android:paddingBottom="@dimen/dimen_5dp">
+
+                <TextView
+                    android:id="@+id/tv_landing_language_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/language"
+                    android:textSize="@dimen/text_size_13sp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_landing_languages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="English"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/text_size_13sp"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp_selector"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp_selector"
+                    android:textColor="@color/vehicle_unselect_color" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_profile_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16sp"
+            android:text="@string/logout"
+            android:layout_below="@id/ll_user_profile_layout"
+            android:padding="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_25dp"
+            android:layout_marginBottom="@dimen/dimen_25dp"
+            android:textColor="@color/vehicle_unselect_color"
+            android:gravity="center"
+            android:textAllCaps="true" />
+    </RelativeLayout>
+
+</ScrollView>

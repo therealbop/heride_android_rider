@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_someOne_header"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:textColor="@color/vehicle_unselect_color"
+        android:textSize="@dimen/text_size_18sp"
+        android:text="@string/who_will_ride"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:background="@color/divider_invoice3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"/>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:id="@+id/rl_someOne_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_someOne_profile"
+                    android:src="@drawable/book_profile_grey_default_image"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="@dimen/dimen_80dp"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_alignRight="@+id/iv_someOne_profile"
+                    android:src="@drawable/book_add_icon_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/iv_someOne_profile"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+            <TextView
+                android:text="@string/choose_who"
+                android:id="@+id/tv_someOne_profile_name"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_some_one_container"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_someOne_note"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginStart="@dimen/dimen_25dp"
+        android:layout_marginRight="@dimen/dimen_25dp"
+        android:layout_marginEnd="@dimen/dimen_25dp"
+        android:text="@string/confirm_rider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:background="@color/divider_invoice3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        android:layout_height="@dimen/dimen_1dp"/>
+
+    <Button
+        android:id="@+id/btn_someOne_confirm"
+        android:textSize="@dimen/text_size_18sp"
+        android:textColor="@color/order_status"
+        android:text="@string/btn_confirm_ride"
+        android:background="@drawable/selector_white_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

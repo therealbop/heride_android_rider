@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.karru.landing.favorite.view.FavoriteDriversActivity">
+
+    <include
+        android:id="@+id/rl_favorite_action_bar"
+        layout="@layout/layout_custom_action_bar"/>
+
+    <ProgressBar
+        android:id="@+id/pb_favorite_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/ll_favorite_empty_background"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/rl_favorite_action_bar">
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_60dp"
+            android:src="@drawable/signup_profile_default_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_corporate_saferMsg"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/text_size_17sp"
+            android:text="@string/no_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:padding="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:id="@+id/tv_corporate_alert"
+            android:textSize="@dimen/text_size_13sp"
+            android:textColor="@color/santas_gray"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:text="@string/favorite_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_favorite_action_bar">
+
+        <LinearLayout
+            android:id="@+id/ll_favorite_drivers_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/dimen_15dp">
+
+            <LinearLayout
+                android:id="@+id/ll_favorite_online_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_15dp"
+                android:paddingLeft="@dimen/dimen_15dp"
+                android:paddingStart="@dimen/dimen_15dp"
+                android:paddingRight="@dimen/dimen_15dp"
+                android:paddingEnd="@dimen/dimen_15dp">
+
+                <TextView
+                    android:id="@+id/tv_favorite_online"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textDirection="locale"
+                    android:textAlignment="viewStart"
+                    android:text="@string/online"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textColor="@color/vehicle_unselect_color"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_favorite_online_drivers_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:paddingTop="@dimen/dimen_8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_favorite_offline_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_15dp"
+                android:paddingLeft="@dimen/dimen_15dp"
+                android:paddingStart="@dimen/dimen_15dp"
+                android:paddingRight="@dimen/dimen_15dp"
+                android:paddingEnd="@dimen/dimen_15dp">
+
+                <TextView
+                    android:id="@+id/tv_favorite_offline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/offline"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:gravity="start"
+                    android:textDirection="locale"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/vehicle_unselect_color"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_favorite_offline_drivers_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:paddingTop="@dimen/dimen_8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

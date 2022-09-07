@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_cancel_reason"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_cancel_reason_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_15dp"
+        android:paddingBottom="@dimen/dimen_15dp"
+        android:gravity="center|start"
+        android:text="@string/other"
+        android:textSize="@dimen/text_size_12sp"
+        android:textColor="@color/vehicle_unselect_color"/>
+
+    <View
+        android:id="@+id/vw_cancel_reason_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/cancel_dialog_devider"
+        android:layout_below="@id/tv_cancel_reason_title" />
+</RelativeLayout>

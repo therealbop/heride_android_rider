@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:isScrollContainer="true"
+    android:orientation="vertical">
+
+    <include android:id="@+id/included_tb_abt"
+        layout="@layout/layout_custom_action_bar"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/included_tb_abt"
+        android:id="@+id/til_corpo_mail_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_30dp"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:layout_marginStart="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:textColorHint="@color/brown">
+
+        <EditText
+            android:id="@+id/et_corpo_mail_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/corporate_mail"
+            android:inputType="textEmailAddress"
+            android:maxLength="30"
+            android:gravity="start"
+            android:textDirection="locale"
+            android:textAlignment="viewStart"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:textColorHint="@color/brown"
+            android:textSize="@dimen/text_size_16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_corpo_mail_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_layout"
+        android:padding="@dimen/dimen_15dp"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

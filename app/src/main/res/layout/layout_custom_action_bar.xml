@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/toolBarTermsConds"
+    android:elevation="@dimen/dimen_5dp"
+    android:background="@drawable/selector_white_layout"
+    android:layout_height="?android:attr/actionBarSize">
+
+    <RelativeLayout
+        android:id="@+id/rl_back_button"
+        android:layout_width="?android:attr/actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/selector_white_layout"
+        android:paddingRight="@dimen/dimen_10dp"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp">
+
+        <ImageView
+            android:id="@+id/iv_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_book_a_truck_back_icon"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tv_all_tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/tv_all_tool_bar_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18sp"
+            android:layout_gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlToolBarEnd"
+        android:layout_width="70dp"
+        android:layout_height="?android:actionBarSize"
+        android:visibility="gone"
+        android:background="@drawable/selector_layout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/tvToolBarEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dimen_5dp"
+            android:paddingStart="@dimen/dimen_5dp"
+            android:paddingRight="@dimen/dimen_5dp"
+            android:paddingEnd="@dimen/dimen_5dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14sp"/>
+    </RelativeLayout>
+</RelativeLayout>

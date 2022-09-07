@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/rl_driver_pref_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dimen_10dp">
+
+    <ImageView
+        android:id="@+id/iv_driver_preference_icon"
+        android:layout_width="@dimen/dimen_30dp"
+        android:layout_height="@dimen/dimen_30dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_driver_preference_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_driver_preference_icon"
+        android:layout_toEndOf="@+id/iv_driver_preference_icon"
+        android:textColor="@color/vehicle_unselect_color"
+        android:textSize="@dimen/text_size_14sp"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:textDirection="locale"
+        android:textAlignment="viewStart"
+        android:gravity="center|start"
+        android:drawableRight="@drawable/check_mark_selector"
+        android:drawableEnd="@drawable/check_mark_selector" />
+</RelativeLayout>

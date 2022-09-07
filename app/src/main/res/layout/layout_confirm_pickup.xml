@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/ll_confirm_pick_bottom">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pleaseWait"
+            android:layout_centerInParent="true"
+            android:paddingTop="@dimen/dimen_40dp" />
+
+        <fragment
+            android:id="@+id/frag_confirm_pick_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.SupportMapFragment" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_confirm_pick_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/dimen_10dp"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
+
+    <ImageView
+        android:id="@+id/iv_confirm_pick_curr_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_10dp"
+        android:src="@drawable/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ll_confirm_pick_bottom"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ll_confirm_pick_bottom">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/vw_confirm_pick_dummy"
+            android:src="@drawable/confirmation_pickup_pin_icon"/>
+
+        <View
+            android:id="@+id/vw_confirm_pick_dummy"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_confirm_pick_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_confirm_pick_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18sp"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:paddingStart="@dimen/dimen_20dp"
+            android:paddingTop="@dimen/dimen_25dp"
+            android:paddingBottom="@dimen/dimen_25dp"
+            android:gravity="start|center"
+            android:textDirection="locale"
+            android:textAlignment="viewStart"
+            android:lineSpacingExtra="@dimen/dimen_5dp"
+            android:text="@string/confirm_pick_at"
+            android:textColor="@color/confirm_pick_address"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_confirm_pick_button"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:textSize="@dimen/text_size_19sp"
+            android:textColor="@color/white"
+            android:text="@string/confirm_pick"
+            android:gravity="center"
+            android:background="@drawable/selector_layout"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

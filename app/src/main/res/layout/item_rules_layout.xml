@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_black_dot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_11dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:src="@drawable/black_dot" />
+
+        <TextView
+            android:id="@+id/tv_rules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_toEndOf="@+id/iv_black_dot1"
+            android:layout_toRightOf="@+id/iv_black_dot1"
+            android:text="Rule"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

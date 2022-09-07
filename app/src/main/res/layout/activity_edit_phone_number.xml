@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_smoke"
+    android:isScrollContainer="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_custom_action_bar"
+        android:id="@+id/include_PhoneEditctb" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_edit_phone_saveMobileNum"
+        android:layout_below="@+id/include_PhoneEditctb"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/rl_edit_phone_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <!--Phone verification info-->
+            <TextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:id="@+id/tv_edit_phone_phoneNoMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/dimen_30dp"
+                android:layout_marginLeft="@dimen/dimen_30dp"
+                android:layout_marginRight="@dimen/dimen_30dp"
+                android:layout_marginStart="@dimen/dimen_30dp"
+                android:gravity="center"
+                android:paddingTop="@dimen/dimen_20dp"
+                android:text="@string/phone_verfication_info"
+                android:textColor="@color/brown"
+                android:textSize="@dimen/text_size_13sp" />
+
+            <!--Country code picker and phone number-->
+
+            <TextView
+                android:id="@+id/tv_edit_phone_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_edit_phone_phoneNoMsg"
+                android:layout_marginLeft="@dimen/dimen_38dp"
+                android:layout_marginStart="@dimen/dimen_38dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="@string/phone_number"
+                android:textColor="@color/brown"
+                android:textSize="@dimen/text_size_10sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_edit_phone_phoneNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_edit_phone_label"
+                android:layout_marginBottom="@dimen/dimen_0dp"
+                android:layout_marginEnd="@dimen/dimen_30dp"
+                android:layout_marginLeft="@dimen/dimen_35dp"
+                android:layout_marginRight="@dimen/dimen_30dp"
+                android:layout_marginStart="@dimen/dimen_35dp"
+                android:layout_marginTop="@dimen/dimen_0dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_edit_phone_countryFlag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_edit_phone_countryFlag"
+                        android:layout_width="@dimen/dimen_35dp"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/flag_in" />
+
+
+                    <TextView
+                        android:id="@+id/tv_edit_phone_countryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:paddingStart="@dimen/dimen_4dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_edit_phone_drop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="@dimen/dimen_5dp"
+                        android:layout_marginEnd="@dimen/dimen_5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_change_number_down_arrow_icon" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_edit_phone_phoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:paddingBottom="@dimen/dimen_5dp"
+                    android:paddingTop="@dimen/dimen_2dp"
+                    android:textColorHint="@color/grayTextColor"
+                    android:textSize="@dimen/text_size_19sp"
+                    tools:ignore="TextFields" />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/view_edit_phone_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_edit_phone_phoneNum"
+                android:layout_marginBottom="@dimen/dimen_30dp"
+                android:layout_marginLeft="@dimen/dimen_35dp"
+                android:layout_marginRight="@dimen/dimen_35dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:background="@color/tiet_under_line"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/view_edit_phone_line"
+                android:background="@color/gray"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:enabled="false"
+        android:background="@color/grey_bg"
+        android:id="@+id/btn_edit_phone_saveMobileNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/get_code"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18sp" />
+
+</RelativeLayout>

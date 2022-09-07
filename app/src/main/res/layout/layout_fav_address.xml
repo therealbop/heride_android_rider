@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/dimen_20dp"
+    android:layout_marginStart="@dimen/dimen_20dp"
+    android:layout_marginRight="@dimen/dimen_20dp"
+    android:layout_marginEnd="@dimen/dimen_20dp"
+    android:layout_marginTop="?actionBarSize">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_fav_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dimen_2dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RadioGroup
+                android:id="@+id/rg_fav_address_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rb_fav_type_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/darkGray"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/home"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:button="@drawable/radio_fav_selector" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rb_fav_type_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen_5dp"
+                    android:text="@string/work"
+                    android:textColor="@color/fav_disable"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:button="@drawable/radio_fav_selector" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rb_fav_type_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/others"
+                    android:padding="@dimen/dimen_5dp"
+                    android:textColor="@color/fav_disable"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:button="@drawable/radio_fav_selector" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ll_home_fav_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_below="@+id/rg_fav_address_type">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_book_a_truck_heart_icon_on_selector"/>
+                <EditText
+                    android:id="@+id/et_home_fav_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoComplete|textCapWords"
+                    android:hint="@string/nameUrFav"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_size_12sp"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="start|center_vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fav_address_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_below="@+id/ll_home_fav_title">
+
+                <ImageView
+                    android:id="@+id/iv_fav_address_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    app:srcCompat="@drawable/ic_fav_home_icon"/>
+
+                <TextView
+                    android:id="@+id/tv_fav_address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="@string/fetching_location"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_size_12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_home_fav_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/ll_fav_address_text"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:layout_marginRight="@dimen/dimen_15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_home_fav_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_white_layout"
+                    android:padding="@dimen/dimen_8dp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/fare_text_color"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_home_fav_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_white_layout"
+                    android:padding="@dimen/dimen_8dp"
+                    android:text="@string/save"
+                    android:textColor="@color/fare_text_color"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/vw_fav_address_tooth"
+        android:layout_width="@dimen/dimen_30dp"
+        android:layout_height="@dimen/dimen_15dp"
+        android:background="@drawable/white_triangle_selector"
+        android:layout_below="@+id/cv_fav_address"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/vw_fav_address_tooth">
+
+        <View
+            android:id="@+id/vDotted_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/dotted_line_shape"
+            android:layerType="software" />
+
+        <ImageView
+            android:id="@+id/iv_home_mid_pointer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/confirmation_pickup_pin_icon"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

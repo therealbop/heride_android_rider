@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/ll_driver_preferences_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_driver_preferences_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/dimen_15dp"
+            android:text="@string/cancel"
+            android:textColor="@color/order_status"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/tv_driver_preferences_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/driver_preference"
+            android:padding="@dimen/dimen_15dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/vehicle_unselect_color"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/tv_driver_preferences_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done"
+            android:padding="@dimen/dimen_15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/order_status"
+            android:textSize="@dimen/text_size_14sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vw_driver_preferences_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/divider_invoice3"
+        app:layout_constraintTop_toBottomOf="@+id/ll_driver_preferences_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_driver_preferences_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_15dp"
+        android:paddingEnd="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        app:layout_constraintTop_toBottomOf="@+id/vw_driver_preferences_divider"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

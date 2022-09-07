@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_home_confirm_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_home_confirm_action_close"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@drawable/selector_white_layout">
+
+                <ImageButton
+                    android:id="@+id/ib_home_confirm_action_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/selector_white_layout"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_close_24dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_home_confirm_action_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/confirm"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_home_confirm_address_pick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            app:layout_constraintTop_toBottomOf="@+id/rl_home_confirm_action_bar">
+
+            <RelativeLayout
+                android:id="@+id/rl_home_confirm_pick_icon"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_home_confirm_pick_icon"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/white"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/dimen_6dp"
+                    android:rotation="45"
+                    android:src="@drawable/shape_box_square_green" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_home_confirm_pick_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/rl_home_confirm_pick_icon"
+                android:layout_toEndOf="@+id/rl_home_confirm_pick_icon"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:textDirection="locale"
+                android:textAlignment="viewStart"
+                android:gravity="start|center_vertical"
+                android:hint="@string/fetching_location"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_14sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vw_home_confirm_dotted"
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:background="@drawable/grey_dotted_line"
+            android:layerType="software"
+            app:layout_constraintTop_toBottomOf="@+id/rl_home_confirm_address_pick" />
+
+        <RelativeLayout
+            android:id="@+id/rl_home_confirm_drop_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:background="@color/address_drop_color"
+            android:paddingBottom="@dimen/dimen_5dp"
+            android:paddingTop="@dimen/dimen_5dp"
+            app:layout_constraintTop_toBottomOf="@+id/vw_home_confirm_dotted">
+
+            <View
+                android:id="@+id/vw_home_confirm_drop_dotted"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_10dp"
+                android:background="@drawable/grey_dotted_line"
+                android:layerType="software" />
+
+            <RelativeLayout
+                android:id="@+id/rl_home_confirm_drop_icon"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vw_home_confirm_drop_dotted"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_home_confirm_drop_icon"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/dimen_6dp"
+                    android:rotation="45"
+                    android:src="@drawable/shape_box_square_red" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_home_confirm_drop_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/rl_home_confirm_drop_icon"
+                android:layout_toEndOf="@+id/rl_home_confirm_drop_icon"
+                android:drawableEnd="@drawable/pinit_location_search_icon_on"
+                android:drawableRight="@drawable/pinit_location_search_icon_on"
+                android:hint="@string/enter_drop"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_14sp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:textDirection="locale"
+                android:textAlignment="viewStart"
+                android:gravity="start|center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

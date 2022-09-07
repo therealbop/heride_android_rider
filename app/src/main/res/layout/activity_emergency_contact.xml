@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/included_tb_abt"
+        layout="@layout/layout_custom_action_bar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_emergency_contact_background"
+        android:orientation="vertical"
+        android:layout_below="@+id/included_tb_abt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_60dp"
+            android:src="@drawable/signup_profile_default_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_emergency_contact_saferMsg"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/text_size_17sp"
+            android:text="@string/safety_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:padding="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_emergency_contact_alert"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/santas_gray"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:text="@string/alert_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_below="@+id/included_tb_abt"
+        android:layout_above="@+id/btn_emergency_contact_add"
+        android:id="@+id/rv_emergency_contact_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_above="@+id/tv_emergency_contact_add_limit"
+        android:background="@drawable/signin_login_selector"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:id="@+id/btn_emergency_contact_add"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/selector_login_text"
+        android:text="@string/add_new_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_emergency_contact_add_limit"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:text="@string/cant_add"
+        android:gravity="center" />
+
+</RelativeLayout>

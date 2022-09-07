@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rv_my_vehicles_a_bar"
+        layout="@layout/layout_custom_action_bar"/>
+
+    <ProgressBar
+        android:id="@+id/pb_my_vehicles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_my_vehicles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_add_new_vehicle"
+        android:layout_below="@+id/rv_my_vehicles_a_bar"
+        android:layout_margin="@dimen/dimen_15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_vehicles_empty"
+        android:text="@string/empty_message_vehicles"
+        android:textSize="@dimen/text_size_20sp"
+        android:textColor="@color/brown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/tv_add_new_vehicle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:background="@drawable/signin_login_selector"
+        android:text="@string/add_new_vehicle"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimen_15dp"
+        android:textSize="@dimen/text_size_18sp"
+        android:textColor="@color/selector_login_text" />
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/included_tb_abt"
+        layout="@layout/layout_custom_action_bar"/>
+
+    <ProgressBar
+        android:id="@+id/pb_corporate_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_corporate_profiles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/included_tb_abt">
+
+        <LinearLayout
+            android:id="@+id/ll_corporate_background"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_60dp"
+                android:src="@drawable/corp_profile_briefcase_default_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tv_corporate_saferMsg"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:textColor="@color/mine_shaft"
+                android:textSize="@dimen/text_size_17sp"
+                android:text="@string/corporate_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:padding="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tv_corporate_alert"
+                android:textSize="@dimen/text_size_13sp"
+                android:textColor="@color/santas_gray"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:text="@string/corporate_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_corporate_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_corporate_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/divider_invoice3"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_corporate_add"
+            android:textAllCaps="false"
+            android:background="@drawable/signin_login_selector"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:padding="@dimen/dimen_15dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_14sp"
+            android:textColor="@color/selector_login_text"
+            android:text="@string/add_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

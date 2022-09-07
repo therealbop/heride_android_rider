@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_rental_package"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:textColor="@color/vehicle_unselect_color"
+        android:textSize="@dimen/text_size_13sp"
+        android:text="kjdfkjhfks"
+        android:gravity="center|start"
+        android:drawableLeft="@drawable/package_selector"
+        android:drawableStart="@drawable/package_selector" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider1" />
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <fragment
+        android:id="@+id/frag_home_google_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cl_home_confirm_address"
+        android:layout_above="@+id/ll_home_confirm_bottom"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/ll_home_top_views"
+        android:layout_above="@+id/center_view">
+
+        <include
+            android:id="@+id/ll_home_default_address"
+            android:visibility="visible"
+            layout="@layout/layout_default_address"/>
+
+        <include
+            android:id="@+id/rl_home_fav_address"
+            android:visibility="gone"
+            layout="@layout/layout_fav_address" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/cl_home_confirm_address"
+        android:visibility="gone"
+        layout="@layout/layout_confirmation_address"/>
+
+    <ImageView
+        android:id="@+id/iv_home_confirm_curr_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/tv_home_confirm_surge"
+        android:padding="@dimen/dimen_10dp"
+        android:src="@drawable/location"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_home_confirm_surge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_white_background"
+        android:textColor="@color/vehicle_unselect_color"
+        android:visibility="gone"
+        android:layout_above="@+id/ll_home_confirm_bottom"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_13sp"
+        android:padding="@dimen/dimen_8dp"
+        android:layout_marginLeft="@dimen/dimen_15dp"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:layout_marginRight="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:layout_marginBottom="@dimen/dimen_10dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_home_confirm_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/layout_confirmation_bottom" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/center_view"
+        android:layout_width="@dimen/dimen_1dp"
+        android:layout_height="@dimen/dimen_1dp"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_home_cross_icon"
+        app:srcCompat="@drawable/ic_cross_black"
+        android:layout_below="@id/center_view"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_home_default_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_home_curr_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/dimen_10dp"
+            android:src="@drawable/location" />
+
+        <include
+            android:id="@+id/cv_home_default_bottom"
+            layout="@layout/layout_default_bottom" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/rl_hotel_layout"
+        layout="@layout/layout_hotel"
+        android:clickable="true"
+        android:visibility="gone"
+        android:focusable="true" />
+</RelativeLayout>

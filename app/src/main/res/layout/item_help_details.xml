@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/faqsItemViewLl"
+    android:orientation="vertical"
+    android:background="@drawable/selector_white_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:id="@+id/faqsItemRl">
+            <TextView
+                android:id="@+id/tv_help_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/waterloo"
+                android:layout_centerVertical="true"
+                android:text="i have not receive the order on expected date"/>
+
+            <ImageView
+                android:id="@+id/iv_dir_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_chevron_right_gray_24dp"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_SupportSubCat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/faqsItemRl"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewMainCatBottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/colorGrayLine"
+            android:layout_below="@id/llSupportSubCat"/>
+    </RelativeLayout>
+</LinearLayout>

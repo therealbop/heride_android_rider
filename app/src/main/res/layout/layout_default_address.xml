@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_home_default_address"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_home_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:background="@drawable/home_drawer_background_selector">
+
+        <ImageView
+            android:id="@+id/iv_nav_Drawer"
+            app:srcCompat="@drawable/white_hamburger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10dp"
+            android:layout_gravity="start"
+            android:tint="@color/colorPrimary"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/iv_nav_Drawer_hotel"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10dp"
+            android:layout_gravity="start"
+            android:tint="@color/white"
+            android:visibility="gone"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/iv_home_menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_19_13sp"
+            android:text="@string/app_name"
+            android:src="@drawable/home_logo"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_home_current_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_v_shape"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:paddingBottom="@dimen/dimen_8dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_home_fav_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_book_a_truck_heart_icon_off"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:contentDescription="@string/app_name" />
+
+        <LinearLayout
+            android:id="@+id/ll_home_pick_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/iv_home_fav_icon"
+            android:layout_toStartOf="@+id/iv_home_fav_icon"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical">
+
+            <ImageButton
+                android:id="@+id/img_map_button"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_gravity="center_vertical|start"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/dimen_6dp"
+                android:rotation="45"
+                android:src="@drawable/shape_box_square_green" />
+
+            <TextView
+                android:id="@+id/tv_home_pick_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:gravity="start|center_vertical"
+                android:hint="@string/fetching_location"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingStart="@dimen/dimen_5dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_home_current_pickups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/dimen_2dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:paddingStart="@dimen/dimen_15dp"
+                    android:paddingLeft="@dimen/dimen_15dp"
+                    android:paddingRight="@dimen/dimen_15dp"
+                    android:paddingEnd="@dimen/dimen_15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tv_home_zone_change"
+                        android:layout_toStartOf="@+id/tv_home_zone_change"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_home_zone_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textSize="@dimen/text_size_14sp"
+                            android:textColor="@color/vehicle_unselect_color"/>
+
+                        <TextView
+                            android:id="@+id/tv_home_zone_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_pick_pt"
+                            android:textSize="@dimen/text_size_12sp"
+                            android:textColor="@color/text_color_rate"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_home_zone_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/change"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/dimen_5dp"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:textColor="@color/order_status"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/divider_invoice"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_home_zones"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_100dp"
+                    android:paddingBottom="@dimen/dimen_10dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/vw_fav_address_tooth"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_15dp"
+            android:background="@drawable/white_triangle_selector"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_home_dotted_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/vDotted_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layerType="software"
+            android:layout_above="@+id/iv_home_mid_pointer"
+            android:background="@drawable/dotted_line_shape" />
+
+        <ImageView
+            android:id="@+id/iv_home_mid_pointer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/confirmation_pickup_pin_icon"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+</LinearLayout>
+

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/included_tb_abt"
+        layout="@layout/layout_custom_action_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/included_tb_abt">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorfafafa">
+
+            <LinearLayout
+                android:id="@+id/ll_rent_car_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorfafafa"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/text_color" />
+
+                <TextView
+                    android:id="@+id/tv_rent_car_pickup_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:focusedByDefault="true"
+                    android:text="@string/rent_pick"
+                    android:textAllCaps="true"
+                    android:textColor="@color/rent_car_text_color"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <TextView
+                    android:id="@+id/tv_rent_car_pickup_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:background="@null"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:textColor="@color/vehicle_unselect_color"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:background="@color/otp_shading" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_25dp"
+                android:layout_below="@+id/ll_rent_car_location"
+                android:background="@color/order_divider"
+                android:orientation="horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/rl_rent_car_package"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_divider"
+                android:background="@color/colorfafafa"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <View
+                    android:id="@+id/rl_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/text_color" />
+
+                <TextView
+                    android:id="@+id/tv_rent_car_pickup_package"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_view"
+                    android:paddingStart="@dimen/dimen_20dp"
+                    android:paddingLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="@string/package_2"
+                    android:textAllCaps="true"
+                    android:textColor="@color/rent_car_text_color"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_rent_car_pickup_package"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_rent_car_pickup_package">
+
+                    <TextView
+                        android:id="@+id/tv_rent_car_pickup_package_selected"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_20dp"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:textColor="@color/rent_car_blue"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_rental_packages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_rent_car_pickup_package_selected" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_rent_car_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp_selector" />
+
+                <View
+                    android:id="@+id/view_rent_car_package"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:layout_below="@+id/rl_rent_car_pickup_package"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:background="@color/text_color" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_divider2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_25dp"
+                android:layout_below="@+id/rl_rent_car_package"
+                android:background="@color/order_divider"
+                android:orientation="horizontal"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/ll_rent_car_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_divider2"
+                android:background="@color/colorfafafa"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/text_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_rent_car_pickup_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_20dp"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:text="@string/cab"
+                        android:textAllCaps="true"
+                        android:textColor="@color/rent_car_text_color"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_rent_car_pickup_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_rent_car_pickup_type">
+
+                        <TextView
+                            android:id="@+id/tv_rent_car_pickup_type_selected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_20dp"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:text="Mini"
+                            android:textColor="@color/rent_car_blue"
+                            android:textSize="@dimen/text_size_12sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_15dp"
+                            android:layout_marginLeft="@dimen/dimen_15dp"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:layout_toEndOf="@+id/tv_rent_car_pickup_type_selected"
+                            android:layout_toRightOf="@+id/tv_rent_car_pickup_type_selected"
+                            android:src="@drawable/blue_dot" />
+
+                        <TextView
+                            android:id="@+id/tv_rent_car_pickup_type_minutes_away"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_35dp"
+                            android:layout_marginLeft="@dimen/dimen_35dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:layout_toEndOf="@+id/tv_rent_car_pickup_type_selected"
+                            android:layout_toRightOf="@+id/tv_rent_car_pickup_type_selected"
+                            android:text="15 min away"
+                            android:textColor="@color/rent_car_blue"
+                            android:textSize="@dimen/text_size_12sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_rent_car_selector2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dimen_20dp"
+                        android:layout_marginRight="@dimen/dimen_20dp"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp_selector" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_rent_car_pickup_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_rent_car_pickup_type_selected"
+                        android:layout_width="@dimen/dimen_40dp"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:layout_marginStart="@dimen/dimen_20dp"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/text_size_18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dimen_30dp"
+                        android:layout_marginLeft="@dimen/dimen_30dp">
+
+                        <View
+                            android:layout_width="@dimen/dimen_1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/text_color" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dimen_30dp"
+                        android:layout_marginLeft="@dimen/dimen_20dp">
+
+                        <TextView
+                            android:id="@+id/tv_rent_car_pickup_type_cost_symbol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_rent_car_pickup_type_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/tv_rent_car_pickup_type_cost_symbol"
+                            android:layout_toRightOf="@+id/tv_rent_car_pickup_type_cost_symbol"
+                            android:text=" 799"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_rental_vehicles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_rent_car_fare_details_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/view_car_selector"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@color/text_color" />
+
+                    <TextView
+                        android:id="@+id/tv_rent_car_rules"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/dimen_20dp"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/fare_details_rental"
+                        android:textColor="@color/rent_car_blue"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_rent_car_rules"
+                        android:layout_width="@dimen/dimen_12dp"
+                        android:layout_height="@dimen/dimen_12dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:layout_marginEnd="@dimen/dimen_20dp"
+                        android:layout_marginRight="@dimen/dimen_20dp"
+                        app:srcCompat="@drawable/ic_info_outline_blue_24dp" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_rental_rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/view_rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:background="@color/text_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_divider3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_25dp"
+                android:layout_below="@+id/ll_rent_car_type"
+                android:background="@color/order_divider"
+                android:orientation="horizontal"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/ll_rent_car_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_divider3"
+                android:background="@color/colorfafafa"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/text_color" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_rent_car_about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="@dimen/dimen_10dp"
+                        android:src="@drawable/car_city_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/iv_rent_car_about"
+                        android:layout_toRightOf="@+id/iv_rent_car_about">
+
+                        <TextView
+                            android:id="@+id/tv_rent_car_about"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_20dp"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_marginTop="@dimen/dimen_20dp"
+                            android:text="@string/one_car"
+                            android:textColor="@color/rent_car_text_color_multiple_stops"
+                            android:textSize="@dimen/text_size_12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_rent_car_about_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_20dp"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:layout_marginEnd="@dimen/dimen_20dp"
+                            android:layout_marginRight="@dimen/dimen_20dp"
+                            android:text="@string/make_stops"
+                            android:textColor="@color/rent_car_text_color"
+                            android:textSize="@dimen/text_size_11sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:background="@color/text_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_divider5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_25dp"
+                android:layout_below="@+id/ll_rent_car_about"
+                android:background="@color/order_divider"
+                android:orientation="horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/rl_rent_car_include_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_divider5">
+
+                <include
+                    android:id="@+id/rent_car_confirm_layout"
+                    layout="@layout/layout_confirmation_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

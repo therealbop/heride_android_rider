@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_wallet_alert_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_18sp"
+        android:text="@string/wallet_excess"
+        android:padding="@dimen/dimen_22dp"
+        android:gravity="center"
+        android:textColor="@color/vehicle_unselect_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_wallet_alert_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wallet_alert_title">
+
+        <TextView
+            android:id="@+id/tv_wallet_alert_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/selector_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_12dp"
+            android:text="@string/card"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_19sp" />
+
+        <TextView
+            android:id="@+id/tv_wallet_alert_cash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/dimen_1dp"
+            android:layout_marginStart="@dimen/dimen_1dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_layout"
+            android:gravity="center"
+            android:padding="@dimen/dimen_12dp"
+            android:text="@string/cash"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_19sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_wallet_alert_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recharge_now"
+        android:visibility="gone"
+        android:background="@drawable/selector_layout"
+        android:textColor="@color/white"
+        android:padding="@dimen/dimen_12dp"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_19sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wallet_alert_title"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

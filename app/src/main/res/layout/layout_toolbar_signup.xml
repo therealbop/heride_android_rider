@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@color/white"
+    android:elevation="@dimen/dimen_5dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_all_tool_bar_close"
+            android:layout_width="?android:attr/actionBarSize"
+            android:background="@drawable/selector_white_layout"
+            android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/ib_all_tool_bar_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_close_24dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:background="@color/white"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_all_tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/full_name"
+            android:textSize="@dimen/textsize_19_13sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/tv_all_tool_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:padding="@dimen/dimen_15dp"
+            android:textColor="@color/colorPrimary"/>
+</RelativeLayout>

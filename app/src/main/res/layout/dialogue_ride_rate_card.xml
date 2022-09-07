@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_circle_corner">
+
+    <TextView
+        android:id="@+id/tv_ride_rate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_15sp"
+        android:textColor="@color/vehicle_unselect_color"
+        android:gravity="center"
+        android:text="@string/rate_card"
+        android:background="@color/driver_details"
+        android:padding="@dimen/dimen_15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_invoice3"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="22dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/tv_ride_rate_base_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                android:textSize="@dimen/text_size_15sp"
+                android:textColor="@color/vehicle_unselect_color"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:gravity="start|center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingStart="@dimen/dimen_5dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tv_ride_rate_base_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/text_size_12sp"
+                android:textColor="@color/vehicle_unselect_color"
+                android:text="@string/baseFare"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#c1cfd1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/tv_ride_rate_distance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                android:textSize="@dimen/text_size_15sp"
+                android:textColor="@color/vehicle_unselect_color"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:gravity="start|center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingStart="@dimen/dimen_5dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tv_ride_rate_distance_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/text_size_12sp"
+                android:textColor="@color/vehicle_unselect_color"
+                android:text="@string/distance_rate"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#c1cfd1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/tv_ride_rate_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                android:textSize="@dimen/text_size_15sp"
+                android:textColor="@color/vehicle_unselect_color"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:gravity="start|center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingStart="@dimen/dimen_5dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tv_ride_rate_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:textSize="@dimen/text_size_12sp"
+                android:textColor="@color/vehicle_unselect_color"
+                android:text="@string/time_rate"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"/>
+
+    <TextView
+        android:id="@+id/tv_ride_rate_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_white_layout"
+        android:text="@string/got_it"
+        android:gravity="center"
+        android:textColor="@color/order_status"
+        android:textSize="@dimen/text_size_15sp"
+        android:padding="@dimen/dimen_15dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+        android:visibility="visible" />
+</LinearLayout>

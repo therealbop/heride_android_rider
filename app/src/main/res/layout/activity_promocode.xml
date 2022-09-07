@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.karru.landing.home.promo_code.PromoCodeActivity">
+
+    <include
+        android:id="@+id/toolBarTermsConds"
+        layout="@layout/layout_toolbar_signup" />
+
+    <View
+        android:id="@+id/vw_promo_code_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/divider_invoice3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_12dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/confirmation_promocode_icon"
+            android:contentDescription="@string/app_name" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_promo_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                app:errorTextAppearance="@style/InputTextTheme">
+
+                <EditText
+                    android:id="@+id/et_promo_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_coupon_code"
+                    android:textColor="@color/vehicle_unselect_color"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_promo_code">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>

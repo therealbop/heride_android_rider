@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.heride.rider">
+
+    <uses-sdk tools:overrideLibrary="com.q42.android.scrollingimageview" />
+
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" /> <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="com.threembed.app.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.karru.ApplicationClass"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.v4.app.CoreComponentFactory"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustResize"
+        tools:replace="android:allowBackup,android:appComponentFactory">
+        <activity android:name="com.karru.rental.view.RentalFareActivity"></activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.heride.rider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- @android:style/Theme.DeviceDefault.Light.NoActionBar -->
+        <activity
+            android:name="com.karru.splash.first.SplashActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.karru.authentication.signup.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.karru.authentication.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.karru.authentication.verification.VerifyOTPActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.karru.landing.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="richPush" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.karru.authentication.privacy.TermsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.authentication.privacy.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.splash.second.SecondSplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.karru.landing.add_card.AddCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.karru.landing.card_details.CardDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="eu.janmuller.android.simplecropimage.CropImage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.booking_flow.location_from_map.LocationFromMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.wallet.WalletActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.karru.landing.wallet.wallet_transaction.view.WalletTransactionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.karru.authentication.forgot_password.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.karru.landing.profile.edit_email.EditEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.authentication.change_password.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.profile.edit_phone_number.EditPhoneNumberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/MAP_KEY" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0b18d54b1af7d997774b3b5479677ed78b8248fb" />
+
+        <activity
+            android:name="com.karru.booking_flow.address.view.AddressSelectionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.karru.landing.emergency_contact.EmergencyContactActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/FB_ID" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.karru.landing.profile.edit_name.EditNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.booking_flow.invoice.view.InvoiceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.karru.landing.about.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.rate.RateCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.invite.InviteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.support.SupportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.payment.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.history.view.BookingHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.profile.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.livechatinc.inappchat.ChatWindowActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <service android:name="com.karru.managers.fcm.FireBaseMessageReceiver">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.karru.managers.fcm.FireBaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.karru.managers.account.AppAuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" /> <!-- Mqtt Service -->
+        <service
+            android:name="org.eclipse.paho.android.service.MqttService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="true" />
+
+        <activity
+            android:name="com.karru.booking_flow.ride.request.RequestingActivity"
+            android:theme="@style/URTransparent" />
+        <activity
+            android:name="com.karru.network.NetworkReachableActivity"
+            android:theme="@style/URTransparent" />
+        <activity
+            android:name="com.karru.booking_flow.ride.live_tracking.view.LiveTrackingActivity"
+            android:parentActivityName="com.karru.landing.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.history.history_details.view.HistoryDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.booking_flow.scheduled_booking.ScheduledBookingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.live_chat.LiveChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.twilio_call.ClientActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.corporate.view.CorporateProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.corporate.add_corporate.AddCorporateProfileAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.booking_flow.ride.live_tracking.mqttChat.ChattingActivity"
+            android:parentActivityName="com.karru.landing.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.ads.AdvertiseActivity"
+            android:theme="@style/CampaignTheme"></activity>
+        <activity
+            android:name="com.karru.landing.home.promo_code.PromoCodeActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.twilio.client.TwilioClientService"
+            android:exported="false"
+            android:stopWithTask="true" />
+
+        <activity
+            android:name="com.karru.landing.favorite.view.FavoriteDriversActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.help_center.ZendeskHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.help_center.zendesk_ticket_details.view.HelpIndexTicketDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.landing.my_vehicles.MyVehiclesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karru.rental.view.RentalActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.karru.landing.my_vehicles.add_new_vehicle.AddNewVehicleActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.appsflyer.SingleInstallBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:layout_marginRight="@dimen/dimen_15dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_emergency_contact_item_pic"
+                    android:src="@drawable/round_background"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/tv_emergency_contact_pic_letter"
+                    android:layout_marginStart="@dimen/dimen_14dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:layout_marginLeft="@dimen/dimen_14dp"
+                    android:textSize="@dimen/text_size_25sp"
+                    android:textColor="@color/white"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RelativeOverlap"
+                    android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:id="@+id/iv_emergency_contact_menu"
+                    app:srcCompat="@drawable/ic_emergenc_contact_filled_option_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_17sp"
+                android:id="@+id/tv_emergency_contact_name"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/santas_gray"
+                android:textSize="@dimen/text_size_14sp"
+                android:id="@+id/tv_emergency_contact_number"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:layout_marginRight="@dimen/dimen_15dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_emergency_contact_share_det"
+                    android:textColor="@color/santas_gray"
+                    android:textSize="@dimen/text_size_12sp"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/share_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    tools:ignore="RelativeOverlap" />
+                <Switch
+                    android:id="@+id/swtch_emergency_contact_status"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

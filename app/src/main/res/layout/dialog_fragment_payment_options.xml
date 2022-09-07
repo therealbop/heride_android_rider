@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_payment_options_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/driver_details"
+        android:textColor="@color/vehicle_unselect_color"
+        android:textSize="@dimen/text_size_15sp"
+        android:gravity="center"
+        android:padding="@dimen/dimen_10dp"
+        android:text="@string/how_would_u_like_to_pay"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_invoice3"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_homepage_wallet_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_white_layout">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_payment_options_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet"
+            android:gravity="center|start"
+            android:paddingLeft="@dimen/dimen_15dp"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_8dp"
+            android:paddingBottom="@dimen/dimen_8dp"
+            android:drawablePadding="@dimen/dimen_5dp"
+            android:layout_toLeftOf="@+id/tv_payment_options_wallet_money"
+            android:layout_toStartOf="@+id/tv_payment_options_wallet_money"
+            android:drawableLeft="@drawable/ic_payment_wallet_icon_selector"
+            android:drawableStart="@drawable/ic_payment_wallet_icon_selector"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_payment_options_wallet_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:drawablePadding="@dimen/dimen_5dp"
+            android:paddingTop="@dimen/dimen_8dp"
+            android:paddingBottom="@dimen/dimen_8dp"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:drawableRight="@drawable/payment_tick_selector"
+            android:drawableEnd="@drawable/payment_tick_selector"/>
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_payment_options_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/payment_tick_selector"
+        android:drawableRight="@drawable/payment_tick_selector"
+        android:drawableLeft="@drawable/ic_payment_card_icon_selector"
+        android:drawableStart="@drawable/ic_payment_card_icon_selector"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:gravity="start|center"
+        android:background="@drawable/selector_white_layout"
+        android:paddingBottom="@dimen/dimen_8dp"
+        android:paddingEnd="@dimen/dimen_15dp"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_8dp"
+        android:text="@string/card" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_payment_options_cash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cash"
+        android:gravity="start|center"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:paddingEnd="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_8dp"
+        android:paddingBottom="@dimen/dimen_8dp"
+        android:background="@drawable/selector_white_layout"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:drawableRight="@drawable/payment_tick_selector"
+        android:drawableEnd="@drawable/payment_tick_selector"
+        android:drawableLeft="@drawable/ic_payment_cash_icon_selector"
+        android:drawableStart="@drawable/ic_payment_cash_icon_selector"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_invoice2"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_payment_options_add_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_money"
+        android:gravity="center|start"
+        android:background="@drawable/selector_white_layout"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_8dp"
+        android:paddingBottom="@dimen/dimen_8dp"
+        android:textSize="@dimen/text_size_14sp"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:textColor="@color/order_status"
+        android:drawableLeft="@drawable/ic_payment_add_icon_selector"
+        android:drawableStart="@drawable/ic_payment_add_icon_selector"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_payment_options_add_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_card_debit"
+        android:gravity="center|start"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_8dp"
+        android:paddingBottom="@dimen/dimen_8dp"
+        android:textSize="@dimen/text_size_14sp"
+        android:background="@drawable/selector_white_layout"
+        android:drawablePadding="@dimen/dimen_8dp"
+        android:textColor="@color/order_status"
+        android:drawableLeft="@drawable/ic_payment_add_card_icon_selector"
+        android:drawableStart="@drawable/ic_payment_add_card_icon_selector"/>
+</LinearLayout>

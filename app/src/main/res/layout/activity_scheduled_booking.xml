@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.karru.booking_flow.scheduled_booking.ScheduledBookingActivity">
+
+    <include
+        android:id="@+id/rl_scheduled_action_bar"
+        layout="@layout/layout_custom_action_bar"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <include
+        android:id="@+id/cv_scheduled_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_pick_drop_address"
+        app:layout_constraintTop_toBottomOf="@+id/rl_scheduled_action_bar" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ll_scheduled_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/cv_scheduled_top">
+
+        <fragment
+            android:id="@+id/frag_scheduled_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.MapFragment"
+            class="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <View
+            android:id="@+id/vw_scheduled_dummy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/iv_scheduled_marker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/confirmation_pickup_pin_icon"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/vw_scheduled_dummy"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_above="@+id/iv_scheduled_marker"
+            android:background="@drawable/pending_pink_background"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_20dp">
+
+            <TextView
+                android:id="@+id/tv_scheduled_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="dfjbdksjfbkjdfs"
+                android:textSize="@dimen/text_size_12sp"/>
+
+            <TextView
+                android:id="@+id/tv_scheduled_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dlkjjkkjdsbcvkbdsv"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_8sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_scheduled_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:id="@+id/vw_scheduled_view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/divider_invoice" />
+
+        <include
+            layout="@layout/layout_booking_placeholder" />
+
+        <View
+            android:id="@+id/vw_scheduled_view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/divider_invoice" />
+
+        <TextView
+            android:id="@+id/tv_scheduled_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_white_layout"
+            android:drawableTop="@drawable/ic_live_track_cancel_icon_off_selector"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/cancel"
+            android:textColor="@color/text_color_rate"
+            android:textSize="@dimen/text_size_10sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

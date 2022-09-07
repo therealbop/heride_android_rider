@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Insta</string>
+    <!--Extra-->
+    <string name="action_cancel">Cancelar</string>
+    <string name="something_went_wrong">Algo salió mal. Por favor trate de nuevo.</string>
+    <string name="wait">Espere por favor</string>
+    <string name="confirm">Confirmar</string>
+    <string name="ok">OK</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="cancel_request">¿Cancela la solicitud?</string>
+    <!--Invite Screen-->
+    <string name="choose_client">Elija el Email de un cliente:</string>
+    <string name="message">Mensaje</string>
+    <!--splash screen-->
+    <string name="sign_up">Registrate</string>
+    <string name="sign_in">Registrate</string>
+    <string name="partner_login">CONNEXION PARTENAIRE</string>
+    <!--Confirm pick screen-->
+    <string name="confirm_pick">Confirmar Lugar de recogida</string>
+    <string name="confirm_pick_at">"Confirme su recogida en "</string>
+    <!--Location from map screen-->
+    <string name="select_business_address">Selecione direction de Oficina</string>
+    <string name="select_drop_address">Selecione Destino</string>
+    <string name="search">Buscando</string>
+    <string name="selected_location">Seleccione Ubicación</string>
+    <string name="place_pin1">Ubique el cursor en la dirección exacta</string>
+    <string name="confirm_location">Confirme ubicación</string>
+    <!-- network bar-->
+    <string name="nonetwork">Sin Internet</string>
+    <string name="edit">Editar</string>
+    <string name="alert">Alerta</string>
+    <string name="alert_cap">Alerta</string>
+    <string name="messagealert">Mensaje</string>
+    <string name="network_problem">Sin Internet</string>
+    <string name="internet_check">Sin Internet, Revise su Conexión y trate de nuevo.</string>
+    <!--Login screen-->
+    <string name="don_t_have_an_account">¿No tiene una cuenta?. Ingrese ahora.</string>
+    <string name="phone_validating">Validando el Numero de celular&#8230;</string>
+    <string name="login_email_phone_no">Correo / Celular*</string>
+    <string name="login">Ingresar</string>   //checked
+    
+    <string name="forgotPassword">¿Olvidó la contraseña?</string>
+    <string name="logging_in">Conectando&#8230;</string>
+    <string name="password">CONTRASEÑA</string>
+    <string name="or">o</string>
+    <string name="cant_cancel">¡Disculpe!. No podemos procesar su solicitud</string>
+    <string name="accept_terms_privacy_policy"><![CDATA[Yo acepto los Términos y la Política de Privacidad]]></string>
+    <!--Forgot password screen-->
+    <string name="emailAddress">Correo</string>
+    <string name="resetPswdUsingPhNoLabel">Ingrese su número de Celular, para recibir un código de verificación,y cambiar la contraseña</string>
+    <string name="terms_and_cond">Política de Privacidad</string>
+    <string name="password_mandatory">Contraseña es obligatoria</string>
+    <string name="phone">Celular</string>
+    <string name="guest_name">Nom de l\'invité *</string>
+    <string name="hotel">Un hôtel</string>
+    <string name="guest_room_number">Numéro de chambre*</string>
+    <string name="email">Email</string>
+    <string name="get_email">Obtener verificación de email</string>
+    <string name="select_country">Seleccione Pais</string>
+    <string name="resetPswdUsingEmailLabel">Ingrese su email para recibir un enlace y cambiar la contraseña</string>
+    <string name="enter_phone_mail">Ingrese Celular/Email ID</string>
+    <string name="forget_pass_header">Olvidó la contraseña</string>
+    <!--sign up-->
+    <string name="email_invalid">Favor ingrese correo válido</string>
+    <string name="phone_invalid">Ingrese celular válido</string>
+    <string name="mail_validating">Validando el Numero de celular&#8230;</string>
+    <string name="failImageUpload">No se ingreso imagen, por favor trate de nuevo.</string>
+    <string name="mandatory">Este campo es obligatorio</string>
+    <string name="company_address">Dirección de Trabajo</string>
+    <string name="registering">Registrando&#8230;</string>
+    <string name="invalid_phone">Celular incorrecto</string>
+    <string name="verifying_referral">Verificando Código de Referido</string>
+    <string name="full_name">Nombre Completo</string>
+    <string name="referral_code">Código referido</string>
+    <string name="create_account_signup">Crear Cuenta</string>
+    <string name="signup">Registrate</string>
+    <string name="terms_and_conditions">Términos y Condiciones</string>
+    <string name="privacy_policy">Política de Privacidad</string>
+    <string name="individual">Personal</string>
+    <string name="Business">Empresa</string>
+    <string name="company_name">Nombre de la Empresa</string>
+    <!--Change password screen-->
+    <string name="password_not_matched">Contraseñas no coinciden</string>
+    <string name="password_changed">Contraseña actualizada exitosamente</string>
+    <string name="change_passwd">Cambie Contraseña</string>
+    <string name="passwordCantBeEmpty">Contraseña no puede estar Vacio</string>
+    <string name="passwordInvalid">Contraseña incorrecta</string>
+    <string name="password_not_match">La contraseña no coincide</string>
+    <!--number verification-->
+    <string name="resend_code">Reenviar código?</string>
+    <string name="resending_code">Reenviando código de verificación?</string>
+    <string name="verifying_code">Verificando OTP</string>
+    <string name="verify_number">Verificar celular</string>//check
+    
+    <string name="verify_otp">Verificar Código</string> //check
+    
+    <string name="otp_mandatory">OTP es obligatoria</string> //check
+    
+    <string name="otp_info1">"Un código de verificación ha sido enviado a "</string>
+    <string name="otp_info2">Por favor ingrese el código de abajo</string>
+    <!--card details screen-->
+    <string name="expiry">EXP</string>
+    <string name="Card_Info">Detalles de la Tarjeta</string>
+    <!--payment screen-->
+    <string name="load">Cargando..</string>
+    <string name="load_saved_cards">Cargando Tarjetas ingresadas..</string>
+    <string name="deleting_cards">Borrando Tarjeta..</string>
+    <string name="delete_alert">¿Esta seguro que desea eliminar esta tarjeta?</string>
+    <string name="select_card">Seleccione Tarjeta</string>
+    <string name="addcard">Agregue Tarjeta</string>
+    <string name="scancard">Escanear Tarjeta</string>
+    <!--CorporateProfile screen-->
+    <string name="add_account">Agregue Tarjeta</string>
+    <string name="corporate_mail">Correo de la Empresa</string>
+    <string name="corporate_profile">Perfil de Corporativo</string>
+    <string name="corporate_mail_add">Configurar Perfil Corporativo</string>
+    <string name="corporate_title">Escoja este perfil cuando reserve viajes relacionados con su trabajo. Obtenga factura y reporte de gastos en su correo oficial.</string>
+    <string name="setting_account">Configurando Cuenta..</string>
+    <string name="success">Exitoso</string>
+    <string name="pick_profile">Seleccione un Perfil</string>
+    <string name="submit">Enviar</string>
+    <!--AddCard screen-->
+    <string name="You_did_not_enter_valid_card">Tarjeta no valida</string>
+    <string name="progressMessage">Agregando Tarjeta&#8230;</string>
+    <string name="done">Hecho</string>
+    <string name="card">Tarjeta</string>
+    <!--home screen-->
+    <string name="double_press_exit">Presione Regresar para salir</string>
+    <string name="pick_up_now">Viaje Ahora</string>
+    <string name="pick_up_leter">Reservar</string>
+    <string name="home">Inicio</string>
+    <string name="work">Trabajo</string>
+    <string name="others">Otros</string>
+    <string name="personal">Personal</string>
+    <string name="pick_time">Selecciona la hora de recogida</string>
+    <string name="how_would_u_like_to_pay">Cómo quieres pagar?</string>
+    <string name="add_card_booking">Agregar/Elegir tarjeta</string>
+    <string name="no_drivers_available">Sin Conductores disponibles</string>
+    <string name="trip_from">"Viaja desde "</string>
+    <string name="select_pick_pt">Seleccione Origen</string>
+    <string name="at">En</string>
+    <string name="fetching_location">Buscando Ubicación</string>  //checked
+    <string name="book">LIVRE</string>
+    <string name="enter_details">S\'il vous plaît entrer les détails pour procéder à la réservation</string>
+
+    <string name="no_drivers">Sin Conductores</string>   //checked
+    
+    <string name="we_are_notAvailable">"Lo sentimos, nosotros no operamos en su área todavía, contáctese con www.instamovil.cl y solicite nuestros servicios&#8230;  "</string>          //checked
+    
+    <string name="alreadySetAsFavAdrs">Esta Dirección ya esta guardada en tus favoritos</string>
+    <!--profile screen-->
+    <string name="TakePhoto">Tomar Foto</string>
+    <string name="ChoosefromGallery">Eleja de la Galería</string>
+    <string name="Remove">Remover</string>
+    <string name="AddPhoto">Agregar Foto</string>
+    <string name="confirmLogout">Confirmar Desconección</string>
+    <string name="logout_msg">¿Esta seguro que quiere desconectarse?</string>
+    <string name="logout">Desconectar</string>
+    <!--share_logo fragment-->
+    <string name="share_your_code">Comparta su código</string>
+    <string name="subject_email">¿No has probado Insta aún?</string>
+    <string name="invite">Invitar</string>
+    <string name="facebook">Facebook</string>
+    <string name="mail">Email</string>
+    <string name="twitter">Twitter</string>
+    <!--about Fragment-->
+    <string name="rate_googlePlay">Evalúenos en la Google Play</string>
+    <string name="like_onFacebook">Colocar me gusta en Facebook</string>
+    <string name="legal">Legal</string>
+    <string name="about">Acerca</string>
+    <string name="version">Versión</string>
+    <!--Requesting -->
+    <string name="try_again1">Trate de nuevo</string>
+    <string name="no_rides">No hay carreras disponibles</string>
+    <string name="sorry">"Lo siento, no "</string>
+    <string name="not_available">disponible para su dirección de destino ahora.</string>
+    <!--Select Address Screen-->
+    <string name="select_location_map">Buscar Destino en el Mapa</string>
+    <string name="add_pick_note">"Ingrese dirección de Origen "</string>
+    <string name="add_drop_note">Ingrese Destino</string>
+    <string name="recent">Reciente</string>
+    <string name="favourites">Favoritos</string>
+    <string name="popular">Lieux Populaires</string>
+    <string name="nameUrFav">Nombre a sus favoritos</string>
+    <string name="pleaseWait">Espere por favor</string>
+    <!-- PROFILE screen -->
+    <string name="name">Nombre</string>
+    <string name="phone_number">Celular</string>
+    <string name="e_mail">Correo</string>
+    <string name="password_cap">Contraseña</string>
+    <string name="my_profile">Mi Perfil</string>
+    <string name="view_profile">Ver Perfil</string>
+    <!--Edit Name-->
+    <string name="edit_name">Editar Nombre</string>
+    <string name="fixInputFields">Fijar Campos de Ingreso</string>
+    <string name="enter_new_name">Por favor Ingrese Nuevo Nombre</string>
+    <!--Edit Phone screen-->
+    <string name="phone_cant_empty">Celular no puede estar Vacio</string>
+    <string name="phone_verfication_info">Ingrese su número de Celular, para recibir un código de verificación, para reiniciar el número de celular</string>
+    <string name="change_number">Cambiar Número</string>
+    <!--Edit Email-->
+    <string name="edit_email">Actualizar Email</string>
+    <string name="emailCantBeEmpty">Email no puede estar vacío</string>
+    <string name="enter_new_e_mail">Por favor Ingrese Nuevo Email</string>
+    <!--Edit Password-->
+    <string name="old_password">Contraseña vieja</string>
+    <string name="re_enter_password">Reingrese la contraseña</string>
+    <!-- WALLET TRANSACTIONS screen-->
+    <string name="recentTransactions">Transacciones recientes</string>
+    <string name="transactionID">Trans. ID &#58;</string>
+    <string name="bookingID">Reserva Nº &#58;</string>
+    <string name="all">Todos</string>
+    <string name="debit">Debito</string>
+    <string name="credit">Crédito</string>
+    <string name="recharge_wallet_alert">Usted ha llegado al límite en su billetera. Para continuar debe recargarla.</string>
+    <!-- WALLET FRAGMENT -->
+    <string name="wallet_excess">La Tarifa puede cambiar al final del viaje. ¿Usted  quiere pagar la diferencias vía</string>
+    <string name="you_have">Usted tiene</string>
+    <string name="in_wallet">en su billetera</string>
+    <string name="use_for_booking">Quieres utilizar en este viaje</string>
+    <string name="current_credit">Crédito actual</string>
+    <string name="softLimit">Límite minimo &#58;</string>
+    <string name="hardLimit">Límite máximo &#58;</string>
+    <string name="payUsingCard">Pagar usando tarjeta</string>
+    <string name="payAmount">Monto Pagado</string>
+    <string name="confirmAndPay">Confirm &#38; Pago</string>
+    <string name="softLimitMsg">El balance está cerca del límite inferior permitido en la Billetera</string>
+    <string name="hardLimitMsg">El balance está sobre el límite permitido en la Billetera, no puede ser usado para reservas</string>
+    <string name="no_transactions_done">Transacción no realizada</string>
+    <string name="confirmPayment">Confirme Pago</string>
+    <string name="paymentMsg1">Presione en Confirmar para autorizar.</string>
+    <string name="paymentMsg2">Recargue su billetera con</string>
+    <string name="credit_desc">Crédito es la deuda con la aplicación por el último servicio.</string>
+    <string name="recharge_now">Recargue Ahora</string>
+    <string name="non_zero_recharged">Por favor agregue un monto mayor a 0 para recargar</string>
+    <string name="amount_to_be_recharged">Por favor agregue este monto a recargar</string>
+    <!--Menu Drawer items-->
+    <string name="book_runner">Pedir un auto</string>
+    <string name="my_bookings">Mis Viajes</string>
+    <string name="favorites">Conductores favoritos</string>
+    <string name="rate_card">Tarifas</string>
+    <string name="my_vehicles">Mes véhicules </string>
+    <string name="payments">Pagos</string>
+    <string name="wallet">Mi Billetera</string>
+    <string name="corporate">Perfil Corporativo</string>
+    <string name="support">Soporte</string>
+    <string name="invites">Invitar</string>
+    <string name="abouts">Acerca</string>
+    <string name="liveChat">Chat en Vivo</string>
+    <string name="emergency">Contacto de Emergencia</string>
+
+    <!--My Vehicles-->
+    <string name="add_new_vehicle">Ajouter un nouveau véhicule</string>
+    <string name="delete_vehicle_alert">هل أنت متأكد من أنك تريد حذف هذه السيارة؟</string>
+    <string name="empty_message_vehicles">Aucun véhicule trouvé</string>
+    <string name="year">Année*</string>
+    <string name="make">Faire*</string>
+    <string name="model">Modèle*</string>
+    <string name="color">Couleur*</string>
+    <string name="add_vehicle">Ajouter véhicule</string>
+
+    <!--Support -->
+    <string name="title_support">Soporte</string>
+    <!--Alert Dialog popup-->
+    <string name="yes_alert">Si</string>
+    <string name="cancel_ride">Cancelar Viaje</string>
+    <string name="dont_cancel_ride">No cancelar</string>
+    <string name="no_alert">No</string>
+    <!--AddCard Activity-->
+    <string name="_continue">Continuar</string>
+    <!-- VERSION UPDATE alert popup-->
+    <string name="not_now">No ahora</string>
+    <string name="update_msg">Actualize su aplicación desde la Tienda</string>
+    <string name="update_available">Actualización disponible</string>
+    <string name="Update">Actualice</string>
+    <string name="update_non_mandatory">Actualización disponible en la Play Store. ¿Quiere actualizar ahora?</string>
+    <!--Server Issues -->
+    <!--EditEmailActivity-->
+    <string name="email_empty_error">Email no puede estar vacío</string>
+    <string name="invalid_mail_error">Email incorrecto</string>
+    <string name="wrong_email">Formato de Email incorrecto</string>
+    <!--Confirmation Screen-->
+    <string name="get_total_fare">Obtener Tarifa Total</string>
+    <string name="ride_estimate">Tarifa Estimada</string>
+    <string name="total_fare">Tarifa Total</string>
+    <string name="ride_request">Confirmar Pedido</string>
+    <string name="enter_drop">Selecione Destino</string>
+    <string name="not_added_drop">Destino no ingresado</string>
+    <string name="away">Lejos</string>
+    <string name="advance_fee1">Tarifa Total incluye</string>
+    <string name="advance_fee2">Tarifa por Reserva anticipada</string>
+    <string name="advance_fee3">Peaje/estacionamiento incluidos en el recibo</string>
+    <string name="driver_preference">Preferencias del Conductor</string>
+    <string name="driver_preference_set">Ajustar preferencias  del Conductor</string>
+    <string name="add_card_to_proceed">Por favor agregue tarjeta para proseguir</string>
+    <string name="add_address_to_proceed">Agregue destino para continuar con la reserva</string>
+    <string name="card_ending_with">"Terminada en "</string>
+    <string name="cash">Efectivo</string>
+    <string name="add_card_debit">Agregar/Elegir tarjeta</string>
+    <string name="seat_single">Asiento</string>
+    <string name="seat_multiple">Asientos</string>
+    <string name="promo_code">Código promocional</string>
+    <string name="next">Próximo</string>
+    <string name="change">Cambiar</string>
+    <string name="select_payment_option">Seleccione Modo de pago</string>
+    <string name="have_promo">¿Tienes un código promocional?</string>
+    <string name="apply">Aplicar</string>
+    <string name="enter_promo">Ingrese Código Promocional</string>
+    <string name="fare_estimate1">Tarifa Estimada</string>
+    <string name="after_2_mi">Después de 2 KM</string>
+    <string name="after_60_min">Después 60 mins</string>
+    <string name="capacity">Capacidad de asientos</string>
+    <string name="l_b_h">LxBxH</string>
+    <string name="services">services</string>
+    <string name="services_set">Ensemble de services</string>
+    <string name="add_services">S\'il vous plaît ajouter un service / services pour procéder à la réservation!</string>
+
+    <!--Requesting screen-->
+    <string name="search_drivers">Buscando Conductores cercanos</string>
+    <string name="cancle_bookin">¿Esta seguro que desea cancelar esta solicitud?</string>
+    <!--Rate card screen-->
+    <string name="empty_message">Autos de ese Tipo no disponibles</string>
+    <string name="mi2">Después de 2 KM</string>
+    <string name="min60">Después 60 mins</string>
+    <string name="lbh">LxBxH</string>
+    <string name="min_fare">Tarifa Minima</string>
+    <string name="time_fare">Tarifa por Tiempo</string>
+    <string name="distance_rate">Tarifa de distancia</string>
+    <string name="time_rate">Tarifa por Tiempo</string>
+    <string name="got_it">Obtenido</string>
+    <string name="colon">:</string>
+    <string name="select_city">Seleccione Ciudad</string>
+    <string name="select_vehicle">Seleccione Auto</string>
+    <string name="after">Después</string>
+    <string name="fare_note">Esta es la tarifa total por su servicio. Cambiará si Usted modifica la ruta al destino.</string>
+    <!--ChangePassword-->
+    <string name="forgot_password_text">Celular verificado. Ingrese su nueva contraseña.</string>
+    <string name="password_match">Misma que la contraseña antigua, favor trate con una nueva!!</string>
+    <!--LiveTracking screen-->
+    <string name="on_the_way_pick">En camino a recoger</string>
+    <string name="on_the_way_drop">En viaje</string>
+    <string name="has">Tu auto ha llegado</string>
+    <string name="your_driver">Su conductor</string>
+    <string name="is">es</string>
+    <string name="id">ID</string>
+    <string name="cancel_hint">¿Por qué esta cancelando?</string>
+    <string name="add">Agregue</string>
+    <string name="cancel_booking">¿Cancelar Reserva?</string>
+    <string name="call">Llamar Conductor</string>
+    <string name="call_1">Llamar</string>
+    <string name="share_eta">Compartir ETA</string>
+    <string name="chat">Chatear</string>
+    <string name="other">Otro</string>
+    <!--Invoice screen-->
+    <string name="last_trip">Su último viaje</string>
+    <string name="receipt_details">Detalles del Recibo</string>
+    <string name="baseFare">Tarifa Base</string>
+    <string name="last_due">Ultima deuda</string>
+    <string name="distance_fare">Tarifa de distancia</string>
+    <string name="waiting_fare">Tarifa de Espera</string>
+    <string name="discount">Descuento</string>
+    <string name="total_title">Total</string>
+    <string name="leave_tip">Dejar propina</string>
+    <string name="tip">"Propina "</string>
+    <string name="add_fav">Agregar a Favoritos</string>
+    <string name="remove_fav">Remover de Favoritos</string>
+    <string name="pickup_location">"Ingrese dirección de Origen "</string>
+    <string name="receipt">Recibo</string>
+    <string name="corporate_wallet">Billetera Corporativa</string>
+    <string name="rate_driver">Califique a su Conductor</string>
+    <string name="drop_Location">Ingrese Destino</string>
+    <string name="select_photo_from">Seleccionar foto de</string>
+    <string name="bill_details">Detalles de la boleta</string>
+    <string name="payment_details">Modo de Pago</string>
+    <string name="advance_Fare">" Avance de Comisión"</string>
+    <string name="grand_total">Gran Total</string>
+    <!--Rating Title -->
+    <string name="rating_1">Muy Malo!</string>
+    <string name="rating_2">Uno malo !</string>
+    <string name="rating_3">Un viaje ok !</string>
+    <string name="rating_4">Un buen viaje !</string>
+    <string name="rating_5">Un excelente viaje !</string>
+    <!--Rating Description -->
+    <string name="rating_desc_1">Díganos que no le gustó</string>
+    <string name="rating_desc_2">Díganos que no le gustó</string>
+    <string name="rating_desc_3">Díganos que no le gustó</string>
+    <string name="rating_desc_4">¿Porqué no fue un excelente viaje?</string>
+    <string name="rating_desc_5">¿Porqué no fue un excelente viaje?</string>
+    <!--History screen-->
+    <string name="empty_message_booking">Ninguna reserva encontrada</string>
+    <string name="hours">Horas</string>
+    <string name="minutes4">Minutos</string>
+    <string name="help">Ayuda</string>
+    <string name="rated">Su Calificación</string>
+    <string name="unassigned">No asignado</string>
+    <string name="assigned">Asignado</string>
+    <string name="completed">Pasado</string>
+    <string name="min_fare_detail">Tarifa Minima</string>
+    <string name="past">Pasado</string>
+    <string name="card_ending_with1">"Tarjeta termina en "</string>
+    <string name="cancellationFee">Tarifa de Cancelación</string>
+    <string name="wallet_1">Billetera</string>
+    <!--Scheduled Booking screen-->
+    <string name="title_schedule">Horario de recogida</string>
+    <string name="scheduled">Programa</string>
+    <string name="ride_scheduled">Servicios programados</string>
+    <string name="ride_confirmed">Viaje Confirmado</string>
+    <string name="cancle_booking">¿Esta seguro que desea cancelar esta solicitud?</string>
+    <!--Permissions alert texts-->
+    <string name="alert_location_permision">Permitir el acceso a su ubicación</string>
+    <string name="alert_call_permision">Permitir el acceso a hacer llamadas</string>
+    <string name="permission_alert">"Insta no tiene acceso a tu ubicación.
+Ingresa a ajustes, permisos, y autorízalo"</string>
+    <string name="permission_alert_storage">"Insta no tiene acceso a tu almacenamiento.
+Ingresa a ajustes, permisos, y autorízalo"</string>
+    <!--Emergency Contact Activity-->
+    <string name="alert_msg">Alerte a sus familiares en caso de emergencia.
+Agréguelos a sus contactos de Emergencia</string>
+    <string name="safety_msg">Hagamos que el viaje sea mas seguro</string>
+    <string name="share_details">Siempre comparta los detalles de su viaje</string>
+    <string name="add_new_contact">Agregue contacto</string>
+    <string name="cant_add">Usted puede agregar hasta</string>
+    <string name="contacts">contactos</string>
+    <string name="cant_add_extra">Elimine un contacto para agregar uno nuevo</string>
+    <string name="emergency_contact_alert">"Insta no tiene acceso a tus contactos.
+Ingresa a ajustes, permisos, y autorízalo"</string>
+    <string name="emergency_alert">No pudimos agregar su contacto. Trate de nuevo.</string>
+    <string name="emergency_alert_multiple">Contacto ya ingresado. Trate agregando otro contacto.</string>
+    <string name="sorry_alert">Disculpe!!</string>
+    <!--Some One booking screen-->
+    <string name="who_will_ride">¿Quien será el Pasajero?</string>
+    <string name="choose_who">Elige a quién...</string>
+    <string name="confirm_rider">Confirmando que el pasajero hará un viaje seguro, los detalles fueron enviados a la persona correcta.</string>
+    <string name="btn_confirm_ride">Confirmar Pasajero</string>
+    <!--Fav driver screen-->
+    <string name="whom_will_ride">Conductor(s) Favorito alrededor.</string>
+    <string name="any_fav_driver">Algún Favorito</string>
+    <string name="all_drivers">Algún Conductor en Linea</string>
+    <!--Splash -->
+    <string name="slide_labe1">Rápido de reservar,  con excepcionales tarifas. Enfóquese donde quiere ir. Nosotros nos enfocamos en llevarlo allá.</string>
+    <string name="slide_labe2">Chequee disponibilidad y solicite un viaje a precios compartidos.</string>
+    <string name="slide_labe3">Vea su costo, pague en efectivo, o tarjeta</string>
+    <string name="slide_labe4">Revise su viaje en tiempo real. Vea que tan lejos su viaje es.</string>
+    <string name="slide_labe5">Comparta los detalles de su viaje con sus amigos y familiares</string>
+    <string name="slide_labe6">Obtenga la factura y califique a su conductor para asegurar la calidad del viaje.</string>
+    <string name="finding">Buscando Conductores</string>
+    <!--Twillio  calling screen-->
+    <string name="failed_to_init_call">Imposible iniciar Twilio Client SDK</string>
+    <string name="device_error">Error del aparato</string>
+    <string name="no_device">Aparato no existe</string>
+    <string name="micro_phone_permission">Permiso de Microsoft necesario. Permita en ajustes la funcionalidad adicional.</string>
+    <string name="call_driver">¿Esta seguro que quiere llamar al conductor?</string>
+    <!--ChatMessageScreen-->
+    <string name="enterMsgHere">Escriba mensaje ..</string>
+    <string name="helpSend">Enviar</string>
+    <string name="bid">Nº :</string>   //check
+
+    
+    <!--Play store Rating popup-->
+    <string name="rating_dialog_experience">Cómo fue tu viaje?</string>
+    <string name="rating_dialog_maybe_later">Probablemente mas tarde</string>
+    <string name="rating_dialog_never">Nunca</string>
+    <string name="rating_dialog_feedback_title">Comentario</string>
+    <string name="rating_dialog_submit">Enviar</string>
+    <string name="rating_dialog_cancel">Cancelar</string>
+    <string name="rating_dialog_suggestions">Díganos que no le gustó, y trabajaremos para mejorarlo!!</string>
+    <!--Favorites-->
+    <string name="favorite_title">Puedes agregar  cualquier conductor a tu lista de favoritos, una vez que completes una carrera con él</string>
+    <string name="online">Conectado</string>
+    <string name="offline">Desconectado</string>
+    <string name="fav_alert">¿Esta seguro que quiere eliminar a este conductor de su lista de favoritos?</string>
+    <string name="no_favorites">Usted no tiene Conductores favoritos</string>
+    <!--Languages-->
+    <string name="select_lang">Seleccione Lenguaje</string>
+    <string name="language">Lenguaje</string>
+</resources>

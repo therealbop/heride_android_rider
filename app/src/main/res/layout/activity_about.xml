@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorfafafa">
+
+    <include android:id="@+id/included_tb_abt"
+        layout="@layout/layout_custom_action_bar"/>
+
+    <TextView
+        android:id="@+id/tv_about_app_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/grayLightTextColor"
+        android:gravity="center"
+        android:text="@string/version"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_about_terms_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/included_tb_abt"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_about_rateInGooglePlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen_5dp"
+            android:paddingBottom="@dimen/dimen_5dp"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:background="@drawable/selector_white_layout">
+
+            <ImageView
+                android:id="@+id/iv_about_rateGooglePlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rate"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:padding="@dimen/dimen_5dp"
+                android:id="@+id/tv_about_rateInGooglePlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:textSize="@dimen/text_size_14sp"
+                android:text="@string/rate_googlePlay"
+                android:textColor="@color/grayTextColor"
+                android:layout_toRightOf="@id/iv_about_rateGooglePlay"
+                android:layout_toEndOf="@id/iv_about_rateGooglePlay"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_below="@+id/rl_about_rateInGooglePlay"
+            android:background="@color/lightGray"
+            android:id="@+id/view_about_dividerTop"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_about_likeInFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_about_dividerTop"
+            android:paddingTop="@dimen/dimen_5dp"
+            android:paddingBottom="@dimen/dimen_5dp"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:background="@drawable/selector_white_layout">
+
+            <ImageView
+                android:id="@+id/iv_about_likeInFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/like"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:padding="@dimen/dimen_5dp"
+                android:id="@+id/tv_about_likeInFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:textSize="@dimen/text_size_14sp"
+                android:text="@string/like_onFacebook"
+                android:textColor="@color/grayTextColor"
+                android:layout_toRightOf="@id/iv_about_likeInFacebook"
+                android:layout_toEndOf="@id/iv_about_likeInFacebook"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_below="@+id/rl_about_likeInFacebook"
+            android:background="@color/lightGray"
+            android:id="@+id/view_about_dividerbottom"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_about_dividerbottom"
+            android:id="@+id/rl_about_legal"
+            android:paddingTop="@dimen/dimen_5dp"
+            android:paddingBottom="@dimen/dimen_5dp"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:background="@drawable/selector_white_layout">
+
+            <ImageView
+                android:id="@+id/iv_about_legal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/legal"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:padding="@dimen/dimen_5dp"
+                android:id="@+id/tv_about_legal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:textSize="@dimen/text_size_14sp"
+                android:text="@string/legal"
+                android:textColor="@color/grayTextColor"
+                android:layout_toRightOf="@id/iv_about_legal"
+                android:layout_toEndOf="@id/iv_about_legal"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_below="@+id/rl_about_legal"
+            android:background="@color/lightGray"
+            android:id="@+id/divider3_V" />
+    </RelativeLayout>
+</RelativeLayout>

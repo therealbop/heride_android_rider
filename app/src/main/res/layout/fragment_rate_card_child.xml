@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:id="@+id/rl_rate_card_child_main"
+    android:background="@color/colorfafafa">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_history_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/ll_rate_card_child_empty"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            app:srcCompat="@drawable/ic_my_trips_blank_empty_iocn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingPrefix" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_rate_card_child_empty"
+            android:text="@string/empty_message"
+            android:textSize="@dimen/text_size_16sp"
+            android:textColor="@color/brown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</RelativeLayout>

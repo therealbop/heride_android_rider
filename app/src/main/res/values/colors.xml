@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#684590</color>
+    <color name="colorPrimaryDark">#56327E</color>
+    <color name="colorAccent">#684590</color>
+    <color name="grayTextColor">#ff444444</color>
+    <color name="grayLightTextColor">#939090</color>
+    <color name="check_mark">#6EAF49</color>
+    <color name="karru_green">#FF2FCD83</color>
+    <color name="grey_400">#BDBDBD</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="grey_200">#EEEEEE</color>
+
+    <!--splash activity-->
+    <color name="stroke">#EBEBEB</color>
+    <color name="dark_gray">#FF3B3B3B</color>
+
+    <!--Sign Up ACtivity colors-->
+    <color name="shadow_color">#EBEBEB</color>
+    <color name="shading">#D5D5D5</color>
+    <color name="otp_color">#524f4f</color>
+    <color name="sign_up_edittext">#444444</color>
+    <color name="lightGray">#d3d3d3</color>
+    <color name="white">#ffffff</color>
+    <color name="grey_bg">#cccccc</color>
+    <color name="black">#000000</color>
+    <color name="darkGray">#a8a8a8</color>
+    <color name="blue">#00BFFF</color>
+
+    <!--  network bar     -->
+    <color name="red">#fb1e06</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_black_dark">#80000000</color>
+    <color name="transparent_black_80">#CC000000</color>
+
+    <!--home screen-->
+    <color name="pick_up_later">#FF666666</color>
+    <color name="vehicle_unselect_color">#FF484848</color>
+    <color name="live_track_bg">#FF383938</color>
+    <color name="divider1">#FFDBDBDB</color>
+    <color name="unSelect_zone_marker">#FFA500</color>
+    <color name="spinner_bg">#F4F4F4</color>
+
+    <!-- profile fragment-->
+    <color name="colorGrayLine">#FFC9CBCD</color>
+    <color name="tiet_under_line">#80292828</color>
+
+    <!--RateCardFragment-->
+    <color name="gary_text">#802FCD83</color>
+    <color name="light_black">#FF555555</color>
+    <color name="image_gray">#c5c6c6</color>
+    <color name="brown">#FF8D8F8E</color>
+
+    <!-- share_logo fragment-->
+    <color name="backgroundcolor">#F5F5F5</color>
+    <color name="gray">#FFE6E6E6</color>
+    <color name="addressname">#ff717171</color>
+
+    <!--profile fragment-->
+    <color name="text_color">#999999</color>
+    <color name="white_smoke">#F5F5F5</color>
+
+    <!-- address-->
+    <color name="tab_Unselected">#989898</color>
+
+    <!-- history-->
+    <color name="order_bkgrnd">#fafafa</color>
+    <color name="order_divider">#d6d6d6</color>
+    <color name="order_status">#FF1E96EA</color>
+
+    <!--otp-->
+    <color name="shipment_border">#7f8d97</color>
+    <color name="shiping_text_color">#6f6f6f</color>
+    <color name="otp_shading">#a9a9a9</color>
+
+    <!--invoice-->
+    <color name="green">#008000</color>
+    <color name="star_rating_on">#FFFFC400</color>
+    <color name="star_rating_off">#FFD4D4D4</color>
+    <color name="divider_invoice">#FFE4E7F0</color>
+    <color name="divider_invoice2">#FFF5F5F5</color>
+    <color name="divider_invoice3">#FFDDDDDD</color>
+    <color name="text_color_rate">#FF999999</color>
+
+    <!--login-->
+    <color name="colorAccent8d8f8e">#8d8f8e</color>
+    <color name="grey_logo_subheadinga9a9a9">#a9a9a9</color>
+    <color name="light_shadow">#c4c4c4</color>
+    <color name="color3b3b3b">#3b3b3b</color>
+    <color name="color8d8f8e">#8d8f8e</color>
+    <color name="SignInbuttonGradStart12cca2">#12cca2</color>
+    <color name="tandc1898e2">#1898e2</color>
+    <color name="color333333">#333333</color>
+    <color name="colorfafafa">#fafafa</color>
+    <color name="colord6d6d6">#d6d6d6</color>
+    <color name="color3eba73">#3eba73</color>
+    <color name="colora2a2a2">#a2a2a2</color>
+    <color name="coloreeeeef">#EEEEEF</color>
+    <color name="colorb5b5b5">#b5b5b5</color>
+    <color name="colorececec">#ececec</color>
+    <color name="color3c3c3c">#3c3c3c</color>
+    <color name="red_light">#EC4449</color>
+    <color name="google">#db4437</color>
+    <color name="facebook">#3b5998</color>
+    <color name="yellow_light">#FFD08A13</color>
+
+    <!--Confirmation Screen-->
+    <color name="fare_text_color">#FF1E96EA</color>
+    <color name="fare_bg_color">#F7FAFB</color>
+    <color name="fare_divider_color">#CACACA</color>
+    <color name="address_grey_color">#FF707070</color>
+    <color name="address_drop_color">#FFF1F5F8</color>
+    <color name="select_payment">#FF333333</color>
+    <color name="fav_disable">#FF9E9E9E</color>
+    <color name="advance_fee">#FF848484</color>
+    <color name="personal">#FF131313</color>
+
+    <!--Address Selection Screen -->
+    <color name="bg_color">#FFFAFAFA</color>
+    <color name="search_color">#FFC4C4C4</color>
+    <color name="search_text_color">#FF3498DB</color>
+    <color name="search_address">#FFA4A4AC</color>
+    <color name="search_address_divider">#FFEDEDED</color>
+
+    <!--Requesting Screen-->
+    <color name="request_back">#C0000000</color>
+    <color name="cirvle_color">#FFD7D7D7</color>
+    <color name="rectangle_color">#FFDEDBDC</color>
+    <color name="confirm_pick_address">#FF888888</color>
+
+    <!--LiveTracking-->
+    <color name="divider">#FFC1CFD1</color>
+    <color name="driver_details">#FFF7FAFB</color>
+    <color name="bottom_bg">#FFF2F2F2</color>
+    <color name="cancel_color">#FF7C7C7C</color>
+    <color name="cancel_hint">#FFA9A9A9</color>
+    <color name="cancel_dialog_devider">#FFE1E1E1</color>
+
+    <!--Booking History-->
+    <color name="tab_unselect">#FFB7B7B7</color>
+    <color name="yellow_star">#FFD9CE1C</color>
+    <color name="green_history">#FF39B54A</color>
+    <color name="red_history">#FFFD1818</color>
+
+    <!--Emergency contact activity-->
+    <color name="santas_gray">#FFA4A4AC</color>
+    <color name="mine_shaft">#FF333333</color>
+    <color name="alto">#FFD4D4D4</color>
+
+    <!--ChatMessageScreen-->
+    <color name="colorWhite">#ffffff</color>
+    <color name="waterloo">#7B8091</color>
+
+    <!--HelpCenter-->
+    <color name="red_login_dark">#F52D3A</color>
+    <color name="saffron">#FAA433</color>
+    <color name="livemblue3498">#FF3498DB</color>
+    <color name="blueJobStatusColor">#FF67AFF7</color>
+    <color name="green_continue">#1fc055</color>
+    <color name="colorBotticelli">#DFE4EF</color>
+
+    <!--RentalActivity-->
+    <color name="rent_car_blue">#FF1E96F5</color>
+    <color name="rent_car_text_color">#FF898989</color>
+    <color name="rent_car_text_color_multiple_stops">#FF383938</color>
+    <color name="rent_car_edit_text_color">#FF383938</color>
+</resources>

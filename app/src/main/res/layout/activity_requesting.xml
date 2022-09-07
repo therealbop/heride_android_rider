@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_requesting_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/tb_requesting_action_bar"
+            layout="@layout/layout_custom_action_bar" />
+
+        <include
+            android:id="@+id/cv_requesting_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_pick_drop_address" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_requesting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_requesting_action_bar"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_requesting_wave_animation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_above="@+id/ll_requesting_bottom">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:background="@drawable/confirmation_pickup_pin_icon" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_requesting_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+            <SeekBar
+                android:id="@+id/sb_requesting_timer"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:clickable="false"
+                android:layout_marginRight="-20dp"
+                android:layout_marginEnd="-20dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginStart="-20dp"
+                android:progressDrawable="@drawable/styled_progress"
+                android:thumb="@null"
+                android:minHeight="25dp"
+                android:maxHeight="35dp" />
+
+            <include
+                layout="@layout/layout_booking_placeholder"/>
+
+            <TextView
+                android:id="@+id/rl_requesting_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@color/bottom_bg"
+                android:textColor="@color/cancel_color"
+                android:text="@string/cancel_booking"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/cl_confirm_pick_layout"
+        android:visibility="visible"
+        layout="@layout/layout_confirm_pickup"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_requesting_retry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_10dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl_requesting_vehicle_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/iv_requesting_vehicle_pic"
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="@dimen/dimen_50dp"
+                android:src="@drawable/signup_profile_default_image"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/app_name" />
+
+            <ProgressBar
+                android:id="@+id/pBar_requesting_vehicle"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_requesting_retry_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:paddingStart="@dimen/dimen_20dp"
+            android:paddingRight="@dimen/dimen_20dp"
+            android:paddingEnd="@dimen/dimen_20dp"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColor="@color/vehicle_unselect_color"
+            android:layout_below="@+id/rl_requesting_vehicle_pic"/>
+
+        <TextView
+            android:id="@+id/tv_requesting_retry_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/try_again1"
+            android:gravity="center"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:textSize="@dimen/text_size_18sp"
+            android:background="@drawable/selector_white_layout"
+            android:textColor="@color/order_status"
+            android:layout_below="@+id/tv_requesting_retry_title"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_requesting_tick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dimen_60dp"
+            android:layout_above="@+id/vw_requesting_tick_view">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_requesting_tick_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:srcCompat="@drawable/animated_check" />
+
+            <TextView
+                android:id="@+id/tv_requesting_tick_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14sp"
+                android:text="lkndsnvknfkvn"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:textColor="@color/vehicle_unselect_color"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vw_requesting_tick_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_160dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/selector_layout">
+
+    <!--Navigation drawer-->
+    <ImageView
+        android:id="@+id/iv_profile_menuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:layout_marginLeft="@dimen/dimen_15dp"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        app:srcCompat="@drawable/white_back_button"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tv_profile_tbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_28dp"
+        android:layout_marginLeft="@dimen/dimen_15dp"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:text="@string/my_profile"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_19_13sp"/>
+
+</RelativeLayout>

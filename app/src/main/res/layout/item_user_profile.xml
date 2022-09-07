@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_user_profile_layout"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_user_profile_pic"
+            android:src="@drawable/book_profile_grey_default_image"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_80dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/iv_user_profile_select"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_alignRight="@+id/iv_user_profile_pic"
+            android:src="@drawable/book_tick_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignEnd="@+id/iv_user_profile_pic"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:text="@string/choose_who"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

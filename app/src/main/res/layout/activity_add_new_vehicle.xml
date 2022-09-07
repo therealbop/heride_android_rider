@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/rl_activity_action_bar"
+        layout="@layout/layout_custom_action_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_add_vehicle_save"
+        android:layout_below="@+id/rl_activity_action_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_20dp">
+
+            <TextView
+                android:id="@+id/tv_add_vehicle_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14sp"
+                android:textColor="@color/text_color"
+                android:text="@string/year"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spinner_bg"
+                android:layout_marginBottom="@dimen/dimen_22dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:padding="@dimen/dimen_10dp">
+
+                <Spinner
+                    android:id="@+id/spnr_year_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_year_select_arrow"
+                    android:layout_toStartOf="@+id/iv_year_select_arrow"
+                    android:background="@null"
+                    android:gravity="start|center"
+                    android:textDirection="locale"
+                    android:textAlignment="viewStart"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/iv_year_select_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp_selector"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_add_vehicle_make"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14sp"
+                android:textColor="@color/text_color"
+                android:text="@string/make"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_make"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spinner_bg"
+                android:layout_marginBottom="@dimen/dimen_22dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:padding="@dimen/dimen_10dp">
+
+                <Spinner
+                    android:id="@+id/spnr_make_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_make_select_arrow"
+                    android:layout_toStartOf="@+id/iv_make_select_arrow"
+                    android:background="@null"
+                    android:gravity="start|center"
+                    android:textDirection="locale"
+                    android:textAlignment="viewStart"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/iv_make_select_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp_selector"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_add_vehicle_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14sp"
+                android:textColor="@color/text_color"
+                android:text="@string/model"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spinner_bg"
+                android:layout_marginBottom="@dimen/dimen_22dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:padding="@dimen/dimen_10dp">
+
+                <Spinner
+                    android:id="@+id/spnr_mode_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_model_select_arrow"
+                    android:layout_toStartOf="@+id/iv_model_select_arrow"
+                    android:background="@null"
+                    android:gravity="start|center"
+                    android:textDirection="locale"
+                    android:textAlignment="viewStart"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/iv_model_select_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp_selector"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_add_vehicle_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14sp"
+                android:textColor="@color/text_color"
+                android:text="@string/color"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spinner_bg"
+                android:layout_marginBottom="@dimen/dimen_22dp"
+                android:layout_marginTop="@dimen/dimen_5dp">
+
+                <EditText
+                    android:id="@+id/et_color_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:textColor="@color/vehicle_unselect_color"
+                    android:gravity="start|center"
+                    android:textDirection="locale"
+                    android:background="@null"
+                    android:padding="@dimen/dimen_12dp"
+                    android:textAlignment="viewStart"
+                    android:layout_gravity="center" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_add_vehicle_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:background="@drawable/grey_login_selector"
+        android:text="@string/save"
+        android:enabled="false"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_18sp"
+        android:textColor="@color/selector_login_text" />
+
+</RelativeLayout>

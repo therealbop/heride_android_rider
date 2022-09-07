@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HERide</string>
+
+    <!--Extra-->
+    <string name="action_cancel">Cancel</string>
+    <string name="something_went_wrong">Oops..! Something went wrong.. try again</string>
+    <string name="wait">Please Wait&#8230;.</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="cancel_request">Cancel Request?</string>
+
+    <!--Invite Screen-->
+    <string name="choose_client">Choose an Email client :</string>
+    <string name="message">Message</string>
+
+    <!--splash screen-->
+    <string name="sign_up">SIGN UP </string>
+    <string name="sign_in">SIGN IN </string>
+    <string name="partner_login">PARTNER LOGIN</string>
+
+    <!--Confirm pick screen-->
+    <string name="confirm_pick">CONFIRM PICKUP</string>
+    <string name="confirm_pick_at">Confirm your pickup at</string>
+
+    <!--Location from map screen-->
+    <string name="select_business_address">Select Business Address</string>
+    <string name="select_drop_address">Select Destination Address</string>
+    <string name="search">Searching&#8230;</string>
+    <string name="selected_location">Selected Location</string>
+    <string name="place_pin1">Place the pin on exact location \n or Allow location services</string>
+    <string name="confirm_location">Confirm Location</string>
+
+    <!-- network bar-->
+    <string name="nonetwork">No Internet Connection</string>
+    <string name="edit">Edit</string>
+    <string name="alert">Alert</string>
+    <string name="alert_cap">ALERT</string>
+    <string name="messagealert">Message</string>
+    <string name="network_problem">No Internet Connection</string>
+    <string name="internet_check">Internet not available, Cross check your internet connectivity and try again!</string>
+
+    <!--Login screen-->
+    <string name="don_t_have_an_account">Don\'t have an account? Sign Up</string>
+    <string name="phone_validating">Validating Phone Number&#8230;</string>
+    <string name="login_email_phone_no">Email/Phone Number*</string>
+    <string name="login">Login</string>
+    //checked
+    <string name="forgotPassword">FORGOT PASSWORD ?</string>
+    <string name="logging_in">Logging In&#8230;</string>
+    <string name="or">OR</string>
+    <string name="cant_cancel">Sorry! we can not process your request</string>
+    <string name="accept_terms_privacy_policy"><![CDATA[I Accept Terms & Privacy Policy]]></string>
+
+    <!--Forgot password screen-->
+    <string name="emailAddress">Email Address</string>
+    <string name="resetPswdUsingPhNoLabel">Enter your Phone Number to receive a \n Verification Code to reset password</string>
+    <string name="terms_and_cond"> Terms &amp; Privacy Policy</string>
+    <string name="password_mandatory">Password is mandatory</string>
+    <string name="phone">Phone Number *</string>
+    <string name="guest_name">Guest Name *</string>
+    <string name="hotel">Hotel</string>
+    <string name="guest_room_number">Room Number *</string>
+    <string name="email">Email *</string>
+    <string name="get_code">Get Verification Code</string>
+    <string name="get_email">Get Verification Email</string>
+    <string name="select_country">Select Country</string>
+    <string name="Countrypicker">COUNTRY_PICKER</string>
+    <string name="search_country">Search</string>
+    <string name="resetPswdUsingEmailLabel">Enter your Email Address to receive a \n Link to reset password</string>
+    <string name="enter_phone_mail">Enter your Phone Number/Mail Id</string>
+    <string name="forget_pass_header">Forgot Password</string>
+
+    <!--sign up-->
+    <string name="email_invalid">Enter a valid Email Address</string>
+    <string name="phone_invalid">Enter a valid Phone Number</string>
+    <string name="mail_validating">Validating Email Id&#8230;</string>
+    <string name="failImageUpload">Failed to Upload Image try again..</string>
+    <string name="mandatory">This field is mandatory</string>
+    <string name="company_address">Company Address</string>
+    <string name="registering">Registering&#8230;</string>
+    <string name="invalid_phone">Phone Number is Not valid</string>
+    <string name="verifying_referral">Verifying Referral Code…</string>
+    <string name="full_name">Full Name *</string>
+    <string name="referral_code">Referral code</string>
+    <string name="create_account_signup">Create Account</string>
+    <string name="signup">Sign Up</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="individual">Individual</string>
+    <string name="Business">Business</string>
+    <string name="company_name">Company Name</string>
+    <string name="password">Password*</string>
+
+    <!--Change password screen-->
+    <string name="password_not_matched">Password doesn\'t match</string>
+    <string name="password_changed">Password changed successfully</string>
+    <string name="change_passwd">Change Password</string>
+    <string name="passwordCantBeEmpty">Password cannot be empty\!</string>
+    <string name="passwordInvalid">Password is invalid !</string>
+    <string name="password_not_match">Password Not matched</string>
+
+    <!--number verification-->
+    <string name="resend_code">RESEND CODE\?</string>
+    <string name="resending_code">Re-sending verification code…</string>
+    <string name="verifying_code">Verifying OTP…</string>
+    <string name="verify_number">Verify Mobile Number</string>
+    <string name="verify_otp">Verify Code</string>
+    <string name="otp_mandatory">OTP is mandatory</string>
+    <string name="otp_info1">A Verification Code has been sent to</string>
+    <string name="otp_info2">Please enter the code below.</string>
+    <string name="Bulletu25cf">●</string>
+
+    <!--card details screen-->
+    <string name="expiry">EXP</string>
+    <string name="Card_Info">Card Details</string>
+
+    <!--payment screen-->
+    <string name="load">Loading…</string>
+    <string name="load_saved_cards">Loading saved cards…</string>
+    <string name="deleting_cards">Deleting card…</string>
+    <string name="delete_alert">Are you sure you want to delete this Card?</string>
+    <string name="select_card">Select Card</string>
+    <string name="addcard">Add Card</string>
+    <string name="scancard">Scan card</string>
+
+    <!--CorporateProfile screen-->
+    <string name="add_account">Add Account</string>
+    <string name="corporate_mail">CORPORATE E-MAIL*</string>
+    <string name="corporate_profile">Corporate Profile</string>
+    <string name="corporate_mail_add">Setup Corporate Profile</string>
+    <string name="corporate_title">Choose this profile when booking work-related rides. Get invoices and expense reports in your official email.</string>
+    <string name="setting_account">Setting up account…</string>
+    <string name="success">Success</string>
+    <string name="pick_profile">Pick a profile</string>
+    <string name="submit">Submit</string>
+
+    <!--AddCard screen-->
+    <string name="You_did_not_enter_valid_card">You did not enter a valid card</string>
+    <string name="progressMessage">Adding Card&#8230;</string>
+    <string name="done">Done</string>
+    <string name="card">Card</string>
+
+    <!--home screen-->
+    <string name="double_press_exit">Press back again to exit!</string>
+    <string name="pick_up_now">BOOK NOW</string>
+    <string name="pick_up_leter">PRE BOOK</string>
+    <string name="home">Home</string>
+    <string name="work">Work</string>
+    <string name="others">Others</string>
+    <string name="personal">Personal</string>
+    <string name="pick_time">Pickup Time</string>
+    <string name="how_would_u_like_to_pay">How would you like to pay? </string>
+    <string name="add_card_booking">Add/Choose a Card</string>
+    <string name="no_drivers_available">No Drivers Available</string>
+    <string name="trip_from">Trip from : </string>
+    <string name="select_pick_pt">Select a pickup point</string>
+    <string name="at">At</string>
+    <string name="fetching_location">Fetching Location</string>
+    <string name="no_drivers">No drivers</string>
+    <string name="we_are_notAvailable">Sorry we don\'t operate in your area yet, please contact https://www.heride.com/
+        to request our service&#8230;</string>
+    <string name="alreadySetAsFavAdrs">This location is already saved as your favourite.</string>
+    <string name="know_more">Know More</string>
+    <string name="book">BOOK</string>
+    <string name="enter_details">Please enter the details to proceed with Booking</string>
+
+    <!--profile screen-->
+    <string name="TakePhoto">Take Photo</string>
+    <string name="ChoosefromGallery">Choose from Gallery</string>
+    <string name="Remove">Remove</string>
+    <string name="AddPhoto">Add Photo!</string>
+    <string name="confirmLogout">Confirm LogOut</string>
+    <string name="logout_msg">Are you sure you want to logout?</string>
+    <string name="logout">Logout</string>
+
+    <!--share_logo fragment-->
+    <string name="share_your_code">Share your code</string>
+    <string name="subject_email">Haven\'t tried HERide yet?</string>
+    <string name="invite">Invite</string>
+    <string name="facebook">Facebook</string>
+    <string name="mail">Email</string>
+    <string name="twitter">Twitter</string>
+
+    <!--about Fragment-->
+    <string name="rate_googlePlay">Rate us on Google Play</string>
+    <string name="like_onFacebook"> Like us on Facebook</string>
+    <string name="legal">Legal</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+
+    <!--Requesting -->
+    <string name="try_again1">TRY AGAIN</string>
+    <string name="no_rides">No rides available</string>
+    <string name="sorry">Sorry, no</string>
+    <string name="not_available">available to your drop location now.</string>
+
+    <!--Select Address Screen-->
+    <string name="select_location_map">Search location from map</string>
+    <string name="add_pick_note">Pickup Location</string>
+    <string name="add_drop_note">Drop Location</string>
+    <string name="recent">Recent</string>
+    <string name="favourites">Favourites</string>
+    <string name="popular">Popular Places</string>
+    <string name="nameUrFav">Name your favourite(Ex. Home)</string>
+    <string name="pleaseWait">Please wait…</string>
+
+    <!-- PROFILE screen -->
+    <string name="name">NAME</string>
+    <string name="phone_number">PHONE NUMBER</string>
+    <string name="e_mail">E-MAIL</string>
+    <string name="password_cap">PASSWORD</string>
+    <string name="my_profile">My Profile</string>
+    <string name="view_profile">View profile</string>
+
+    <!--Edit Name-->
+    <string name="edit_name">Edit Name</string>
+    <string name="fixInputFields">Fix Input fields</string>
+    <string name="enter_new_name">Please enter new Name</string>
+
+    <!--Edit Phone screen-->
+    <string name="phone_cant_empty">Phone number cannot be empty!</string>
+    <string name="phone_verfication_info">Please enter your Phone Number and you will get a verification code to reset Phone Number</string>
+    <string name="change_number">Change Number</string>
+
+    <!--Edit Email-->
+    <string name="edit_email">Update Email</string>
+    <string name="emailCantBeEmpty">Email cannot be empty\!</string>
+    <string name="enter_new_e_mail">Please enter new E-mail</string>
+
+    <!--Edit Password-->
+    <string name="old_password">Old Password</string>
+    <string name="re_enter_password">Re-Enter PASSWORD</string>
+
+    <!-- WALLET TRANSACTIONS screen-->
+    <string name="recentTransactions">Recent Transactions</string>
+    <string name="transactionID">Trans. ID &#58; </string>
+    <string name="bookingID">Booking ID &#58; </string>
+    <string name="all">ALL</string>
+    <string name="debit">DEBIT</string>
+    <string name="credit">CREDIT</string>
+    <string name="cardNoHidden">"XXXX XXXX XXXX "</string>
+    <string name="recharge_wallet_alert">You have reached your hard limit in your wallet.You can not proceed unless you recharge wallet.</string>
+
+    <!-- WALLET FRAGMENT -->
+    <string name="wallet_excess">Fare may vary after ride .You want pay excess amount via </string>
+    <string name="you_have">You have </string>
+    <string name="in_wallet">in your wallet.</string>
+    <string name="use_for_booking">Do you want to use in current Ride?</string>
+    <string name="current_credit">CURRENT CREDIT</string>
+    <string name="softLimit">Soft Limit  &#58; </string>
+    <string name="hardLimit">Hard Limit &#58; </string>
+    <string name="payUsingCard">Pay Using Card</string>
+    <string name="payAmount">Pay Amount</string>
+    <string name="confirmAndPay">Confirm &#38; Pay</string>
+    <string name="softLimitMsg">The balance is closed to lowest allowed wallet limit</string>
+    <string name="hardLimitMsg">Lowest wallet limit and wallet cannot be used for bookings</string>
+    <string name="no_transactions_done">No transactions done</string>
+    <string name="confirmPayment">Confirm Payment</string>
+    <string name="paymentMsg1">Click on CONFIRM to authorize </string>
+    <string name="paymentMsg2"> to re-charge your wallet with </string>
+    <string name="credit_desc">Credit is the money due to the app for past bookings</string>
+    <string name="recharge_now">Recharge Now</string>
+    <string name="non_zero_recharged">Please add non zero amount to be recharged.</string>
+    <string name="amount_to_be_recharged">Please add amount to be recharged.</string>
+
+    <!--Menu Drawer items-->
+    <string name="book_runner">Book A Ride</string>
+    <string name="my_bookings">My Bookings</string>
+    <string name="favorites">Favorite Drivers</string>
+    <string name="rate_card">Rate Card</string>
+    <string name="my_vehicles">My Vehicles</string>
+    <string name="payments">Payments</string>
+    <string name="wallet">My Wallet</string>
+    <string name="corporate">Corporate Profile</string>
+    <string name="support">Support</string>
+    <string name="invites">Invite</string>
+    <string name="abouts">About</string>
+    <string name="liveChat">Live Chat</string>
+    <string name="emergency">Emergency Contacts</string>
+
+    <!--My Vehicles-->
+    <string name="add_new_vehicle">Add New Vehicle</string>
+    <string name="add_vehicle">Add Vehicle</string>
+    <string name="delete_vehicle_alert">Are you sure you want to delete this Vehicle?</string>
+    <string name="empty_message_vehicles">No Vehicles Found</string>
+    <string name="year">Year*</string>
+    <string name="make">Make*</string>
+    <string name="model">Model*</string>
+    <string name="color">Color*</string>
+
+    <!--Support -->
+    <string name="title_support">Support Content</string>
+
+    <!--Alert Dialog popup-->
+    <string name="yes_alert">Yes</string>
+    <string name="cancel_ride">Cancel Ride</string>
+    <string name="dont_cancel_ride">Don\'t Cancel</string>
+    <string name="no_alert">No</string>
+
+    <!--AddCard Activity-->
+    <string name="_0_00">0.00</string>
+    <string name="_continue">Continue</string>
+    <string name="poweredby">Powered by</string>
+    <string name="carddflttxt">Make this card default</string>
+    <string name="stars">***************************************************************************************************************</string>
+
+    <!-- VERSION UPDATE alert popup-->
+    <string name="not_now">NOT NOW</string>
+    <string name="update_msg">Your application version is outdated, please update it from the store .</string>
+    <string name="update_available">Update Available:</string>
+    <string name="Update">UPDATE</string>
+    <string name="update_non_mandatory">An update is available on the Play Store. Would you like to update now?</string>
+
+    <!--Server Issues -->
+    <string name="bad_gateway">Bad gateway</string>
+
+    <!--EditEmailActivity-->
+    <string name="email_empty_error">EmailId cannot be empty!</string>
+    <string name="invalid_mail_error">EmailId is invalid !</string>
+    <string name="wrong_email">Wrong Email format !</string>
+
+    <!--Confirmation Screen-->
+    <string name="get_total_fare">Get Total Fare</string>
+    <string name="ride_estimate">Ride Estimate</string>
+    <string name="total_fare">Total Fare</string>
+    <string name="ride_request">CONFIRM BOOKING</string>
+    <string name="towing_request">CONFIRM SERVICE</string>
+    <string name="enter_drop">Enter Destination Address</string>
+    <string name="not_added_drop">Destination Address is not added</string>
+    <string name="away">away</string>
+    <string name="advance_fee1">Total Fare is inclusive of</string>
+    <string name="advance_fee2">advance booking fee.</string>
+    <string name="advance_fee3">Toll/parking included in bill.</string>
+    <string name="driver_preference">Driver Preferences</string>
+    <string name="driver_preference_set">Preferences Set</string>
+    <string name="services">Services</string>
+    <string name="services_set">Services Set</string>
+    <string name="add_card_to_proceed">Please add card to proceed.</string>
+    <string name="add_address_to_proceed">Please add drop address to proceed with the booking.</string>
+    <string name="card_ending_with">Ends With</string>
+    <string name="cash">Cash</string>
+    <string name="add_money">Add HERide Money</string>
+    <string name="add_card_debit">Add/Choose a Debit/Credit Card</string>
+    <string name="seat_single">Seat</string>
+    <string name="seat_multiple">Seats</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="next">Next</string>
+    <string name="change">Change</string>
+    <string name="select_payment_option">Select Payment</string>
+    <string name="have_promo">Do you have promocode?</string>
+    <string name="apply">Apply</string>
+    <string name="enter_promo">Enter a promocode</string>
+    <string name="fare_estimate1">Fare Estimate</string>
+    <string name="after_2_mi">After 2 Mi</string>
+    <string name="after_60_min">After 60 Mins</string>
+    <string name="capacity">Seating Capacity</string>
+    <string name="l_b_h">LxBxH</string>
+    <string name="promo_invalid">Promocode is not valid for this payment method.</string>
+    <string name="charges_applied">Charges applied after </string>
+    <string name="add_services">Please Choose Service/Services to proceed with the booking.</string>
+
+    <!--Requesting screen-->
+    <string name="search_drivers">Finding Nearby Drivers…</string>
+    <string name="cancle_bookin">Are you sure you want to cancel this request ?</string>
+
+    <!--Rate card screen-->
+    <string name="empty_message">No Vehicle Types Found</string>
+    <string name="mi2">After 2 Mi</string>
+    <string name="min60">After 60 Mins</string>
+    <string name="lbh">LxBxH</string>
+    <string name="min_fare">Min Fare</string>
+    <string name="time_fare">Time Fare</string>
+    <string name="distance_rate">Distance Rate</string>
+    <string name="time_rate">Time Rate</string>
+    <string name="got_it">Got It</string>
+    <string name="colon"> :</string>
+    <string name="select_city">Select city</string>
+    <string name="select_vehicle">Select vehicle</string>
+    <string name="after">After</string>
+    <string name="fare_note">Note : This is the total fare for your ride.It will change if you change your dropoff route</string>
+
+    <!--ChangePassword-->
+    <string name="forgot_password_text">Mobile number verified, Enter your new password.</string>
+    <string name="password_match">Same as old Password try with new password!!!</string>
+
+    <!--LiveTracking screen-->
+    <string name="on_the_way_pick">On the way to pickup</string>
+    <string name="on_the_way_drop">On the way to drop</string>
+    <string name="has">has arrived</string>
+    <string name="your_driver">Your driver</string>
+    <string name="is">is</string>
+    <string name="id">ID : </string>
+    <string name="cancel_hint">Please tell us why you want to cancel</string>
+    <string name="add">Add</string>
+    <string name="cancel_booking">Cancel booking?</string>
+    <string name="call">Call Driver</string>
+    <string name="call_1">Call</string>
+    <string name="share_eta">Share ETA</string>
+    <string name="chat">Chat</string>
+    <string name="other">Other</string>
+
+    <!--Invoice screen-->
+    <string name="last_trip">Your Last Trip</string>
+    <string name="receipt_details">Receipt Details</string>
+    <string name="baseFare">Base Fare</string>
+    <string name="last_due">Last Due</string>
+    <string name="distance_fare">Distance Fare</string>
+    <string name="waiting_fare">Waiting Fare</string>
+    <string name="discount">Discount</string>
+    <string name="total_title">Total</string>
+    <string name="leave_tip">Leave a tip</string>
+    <string name="tip">Tip</string>
+    <string name="add_fav">Add To Favorite</string>
+    <string name="remove_fav">Remove From Favorite</string>
+    <string name="pickup_location">Set Pickup Location</string>
+    <string name="receipt">Receipt</string>
+    <string name="corporate_wallet">Corporate Wallet</string>
+    <string name="rate_driver">Rate Your Driver</string>
+    <string name="drop_Location">Drop Location</string>
+    <string name="select_photo_from">Select photo from</string>
+    <string name="bill_details">Bill Details</string>
+    <string name="payment_details">Payment Methods</string>
+    <string name="advance_Fare">Advance Fee</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="leave_comment">Leave a comment</string>
+    <!--Rating Title -->
+    <string name="rating_1">Very bad!</string>
+    <string name="rating_2">A bad one!</string>
+    <string name="rating_3">An OK-OK ride!</string>
+    <string name="rating_4">A good ride!</string>
+    <string name="rating_5">A great ride!</string>
+    <!--Rating Description -->
+    <string name="rating_desc_1">Tell us what went wrong</string>
+    <string name="rating_desc_2">Tell us what went wrong</string>
+    <string name="rating_desc_3">Tell us what went wrong</string>
+    <string name="rating_desc_4">Why wasn\'t this great ride?</string>
+    <string name="rating_desc_5">Why wasn\'t this great ride?</string>
+
+    <!--History screen-->
+    <string name="empty_message_booking">No Bookings Found</string>
+    <string name="hours">Hours</string>
+    <string name="minutes4">Minutes</string>
+    <string name="help">Help</string>
+    <string name="rated">You Rated</string>
+    <string name="unassigned">UNASSIGNED</string>
+    <string name="assigned">Assigned</string>
+    <string name="completed">Past</string>
+    <string name="min_fare_detail">Minimum Fare</string>
+    <string name="past">PAST</string>
+    <string name="card_ending_with1">Card Ending With</string>
+    <string name="cancellationFee">Cancellation Fee</string>
+    <string name="wallet_1">Wallet</string>
+
+    <!--Scheduled Booking screen-->
+    <string name="title_schedule">Pickup Scheduled</string>
+    <string name="scheduled">Scheduled</string>
+    <string name="ride_scheduled">Ride Scheduled</string>
+    <string name="ride_confirmed">Ride Confirmed</string>
+    <string name="cancle_booking">Are you sure you want to cancel this booking ?</string>
+
+    <!--Permissions alert texts-->
+    <string name="alert_location_permision">Allow access to location</string>
+    <string name="alert_call_permision">Allow access to make Call</string>
+    <string name="permission_alert">"HERide doesn\'t have access to your location.
+        Please open settings, go to permissions and allow them."</string>
+    <string name="permission_alert_camera">HERide doesn\'t have access to your camera.\nPlease open settings, go to permissions and allow them.</string>
+    <string name="permission_alert_gallery">HERide doesn\'t have access to your Gallery.\nPlease open settings, go to permissions and allow them.</string>
+    <string name="permission_alert_storage">"HERide doesn\'t have access to your storage.
+        Please open settings, go to permissions and allow them."</string>
+
+    <!--Emergency Contact Activity-->
+    <string name="alert_msg">Alert your dear ones in case of an emergency. Add then to your emergency contacts.</string>
+    <string name="safety_msg">Let\'s make travel safer</string>
+    <string name="share_details">Always Share your ride details</string>
+    <string name="add_new_contact">Add Contact</string>
+    <string name="cant_add">You can add up to </string>
+    <string name="contacts">contacts.</string>
+    <string name="cant_add_extra">Remove any contact to add another.</string>
+    <string name="emergency_contact_alert">"HERide doesn\'t have access to your contacts.
+        Please open settings, go to permissions and allow them."</string>
+    <string name="emergency_alert">Could not add your contact.Please retry.</string>
+    <string name="emergency_alert_multiple">Contact already present.Please try adding another contact.</string>
+    <string name="sorry_alert">Sorry!</string>
+
+    <!--Some One booking screen-->
+    <string name="who_will_ride">Who will be riding?</string>
+    <string name="choose_who">Choose Who’…</string>
+    <string name="confirm_rider">Confirming the rider will make sure trip details are messaged to the right person.</string>
+    <string name="btn_confirm_ride">Confirm rider</string>
+
+    <!--Fav driver screen-->
+    <string name="whom_will_ride">Favorite driver(s) around.</string>
+    <string name="any_fav_driver">Any Favourites</string>
+    <string name="all_drivers">Any Online Drivers</string>
+
+    <!--Splash -->
+    <string name="slide_labe1">Book fast, expectational rides at ride sharing prices in your city. Focus on where youre headed. Well focus on getting you there.</string>
+    <string name="slide_labe2">Check ride availability and tap to request ride at sharing prices.</string>
+    <string name="slide_labe3">See your cost up front and pay with cash or credit.</string>
+    <string name="slide_labe4">Track your ride in real time. Know how far your ride is.</string>
+    <string name="slide_labe5">Share your journey details with friends and family.</string>
+    <string name="slide_labe6">Get invoice and rate your driver to ensure ride quality.</string>
+    <string name="finding">Finding Drivers…</string>
+
+    <!--Twillio  calling screen-->
+    <string name="_00_00">00.00</string>
+    <string name="failed_to_init_call">Failed to initialize the Twilio Client SDK</string>
+    <string name="device_error">Device error</string>
+    <string name="no_device">No existing device</string>
+    <string name="micro_phone_permission">Microphone permissions needed. Please allow in App Settings for additional functionality.</string>
+    <string name="call_driver">Are you sure you want to call driver?</string>
+
+    <!--ChatMessageScreen-->
+    <string name="enterMsgHere">Type Message</string>
+    <string name="helpSend">Send</string>
+    <string name="bid">BID</string>
+
+    <!--Play store Rating popup-->
+    <string name="rating_dialog_experience">How was your experience with us?</string>
+    <string name="rating_dialog_maybe_later">May be later</string>
+    <string name="rating_dialog_never">Never</string>
+    <string name="rating_dialog_feedback_title">Feedback</string>
+    <string name="rating_dialog_submit">Submit</string>
+    <string name="rating_dialog_cancel">Cancel</string>
+    <string name="rating_dialog_suggestions">Suggest us what went wrong and we\'ll work on it!</string>
+
+    <!--Favorites-->
+    <string name="favorite_title">You can add any driver as favorite when you complete the booking with him.</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <string name="fav_alert">Are you sure you want to remove this driver from favorite?</string>
+    <string name="no_favorites">You have no favourite drivers</string>
+
+    <!--Languages-->
+    <string name="select_lang">Select Language</string>
+    <string name="language">LANGUAGE</string>
+    <string name="enter_coupon_code">ENTER COUPON CODE</string>
+
+    <!--Help Index-->
+
+    <string name="helpcenter">Help Center</string>
+    <string name="priorityUrgent">Urgent</string>
+    <string name="priorityHigh">High</string>
+    <string name="priorityNormal">Normal</string>
+    <string name="priorityLow">Low</string>
+    <string name="status">Status</string>
+    <string name="newTicket">New Ticket</string>
+    <string name="ticket">Ticket</string>
+    <string name="networkErrorMsg">You are not connected to internet</string>
+    <string name="my_location">My Location</string>
+    <string name="select_location">Select Location</string>
+    <string name="search_location">Search location</string>
+    <string name="writeboutyourself">We would like to know a little about you.</string>
+    <string name="minute">min</string>
+    <string name="helpSubject">Subject</string>
+    <string name="helpMessage">Message</string>
+    <string name="copy_code">Copy</string>
+    <string name="apply_promo">Apply Promo</string>
+    <string name="sessionExp">session Expire</string>
+    <string name="separator">Valid Upto -</string>
+    <string name="readLess">Know Less</string>
+    <string name="readMore">Know More</string>
+    <string name="t_amp_c"><![CDATA[T&C]]></string>
+    <string name="comingFrom">PROMOCODEACTIVITY</string>
+
+    <string-array name="ticketPriority">
+        <item>urgent</item>
+        <item>high</item>
+        <item>normal</item>
+        <item>low</item>
+    </string-array>
+
+    <!--Rate-->
+    <string name="rate_now">Rate Now</string>
+    <string name="enjoy">If you enjoy using</string>
+    <string name="rate_it">, please take a moment to rate it. Thanks for your support!</string>
+    <string name="later">Later</string>
+
+    <!--Rent Car Activity-->
+    <string name="rent_a_car">Rent a Car</string>
+    <string name="rent_pick">1. Pickup Location</string>
+    <string name="one_car">One Car, Multiple Stops</string>
+    <string name="package_2">2. Package</string>
+    <string name="cab">3. Cab Type</string>
+    <string name="select_package">2. Select Package</string>
+    <string name="choose_cab_type">3. Choose a Cab Type</string>
+    <string name="fare_details_rental">Fare details and rules</string>
+    <string name="make_stops">Make as many stops as you like with one booking</string>
+    <string name="duration_fare">Duration Fare</string>
+    <string name="distance_fare_description">After first 20.0 Km</string>
+    <string name="duration_fare_description">After first 0.016666666666 hours</string>
+    <string name="additional_km_fare">Additional KM Fare</string>
+    <string name="additional_time_fare">Additional Ride Time Fare</string>
+    <string name="additional_booking_fee">Additional Booking Fee</string>
+    <string name="rental_details">Rental Details</string>
+    <string name="hotel_name">HOTEL NAME</string>
+</resources>

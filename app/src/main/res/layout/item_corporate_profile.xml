@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_corporate_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent"
+        android:padding="@dimen/dimen_20dp">
+
+        <ImageView
+            android:src="@drawable/corp_profile_briefcase_default_image"
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="@dimen/dimen_60dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_corporate_name"
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/vehicle_unselect_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_corporate_mail"
+                android:textSize="@dimen/text_size_14sp"
+                android:textColor="@color/search_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/vw_corporate_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:layout_marginLeft="@dimen/dimen_25dp"
+        android:layout_marginStart="@dimen/dimen_25dp"
+        android:background="@color/divider_invoice3"
+        android:layout_below="@+id/ll_corporate_item"/>
+</RelativeLayout>
