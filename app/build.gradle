@@ -34,7 +34,7 @@ allprojects {
 android {
     signingConfigs {
         release {
-            storeFile file('D:\\AndroidStudio_projects\\KARRY\\heride_rider\\Truckr\\keystore\\heride_keystore.jks')
+            storeFile file('../keystore/heride_keystore.jks')
             storePassword '3embed'
             keyAlias 'heride'
             keyPassword '3embed'
