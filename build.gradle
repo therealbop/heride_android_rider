@@ -2,8 +2,9 @@
 
 buildscript {
     repositories {
-        jcenter()
         google()
+        mavenCentral()
+        jcenter() // deprecated, fallback only
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
@@ -17,9 +18,11 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
         google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
         maven { url "https://repo.eclipse.org/content/repositories/paho-snapshots/" }
+        jcenter() // deprecated, fallback only
     }
 }
 
