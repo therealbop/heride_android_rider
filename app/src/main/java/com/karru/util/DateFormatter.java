@@ -91,21 +91,26 @@ public class DateFormatter
     /**
      * <h2>getDateInSpecificFormatWithTime</h2>
      * This method is used to convert the date format to 4th May 1993, 5:06 am
-     * @param dateInString date in string format
+     * The server returns dates already in the correct local timezone, so no
+     * UTC conversion is performed.
+     * @param dateInString date in string format (already in correct local timezone)
+     * @param timeZone time zone (used for parsing and formatting consistently)
      * @return returns the formatted date in string
      */
-    public String getDateInSpecificFormatWithTime(String dateInString,TimeZone timeZone)
+    public String getDateInSpecificFormatWithTime(String dateInString, TimeZone timeZone)
     {
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy HH:mm a", Locale.US);
-        sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+        // Parse and format using the same timezone to avoid conversion issues.
+        // The server returns dates already in the correct local timezone.
+        sdf.setTimeZone(timeZone);
         try {
-            cal.setTime(sdf.parse(dateInString));// all done
+            cal.setTime(sdf.parse(dateInString));
         } catch (ParseException e) {
             e.printStackTrace();
         }
         String dayNumberSuffix = getDayNumberSuffix(cal.get(Calendar.DAY_OF_MONTH));
-        DateFormat dateFormat = new SimpleDateFormat("dd'"+ dayNumberSuffix +"' MMM yyyy, hh:mm a",Locale.US);
+        DateFormat dateFormat = new SimpleDateFormat("dd'"+ dayNumberSuffix +"' MMM yyyy, hh:mm a", Locale.US);
         dateFormat.setTimeZone(timeZone);
         return dateFormat.format(cal.getTime());
     }
@@ -126,28 +131,20 @@ public class DateFormatter
 
     /**
      * <h2>getDateWithTimeZone</h2>
-     * used to get the time in gmt
-     * @param OurDate date in string with gmt
-     * @param timeZone time zone
-     * @return returns date with time zone
+     * Returns the time string as-is. The server already returns the booking time
+     * in the correct local timezone, so no conversion is needed.
+     * @param OurDate date in string (already in correct local timezone from server)
+     * @param timeZone time zone (kept for API compatibility, not used)
+     * @return returns the time string unchanged
      */
     public static String getDateWithTimeZone(String OurDate, TimeZone timeZone)
     {
-        try
-        {
-            SimpleDateFormat formatter = new SimpleDateFormat("hh:mm a",Locale.US);
-            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
-            Date value = formatter.parse(OurDate);
-
-            formatter.setTimeZone(timeZone);
-            OurDate = formatter.format(value);
-            com.karru.utility.Utility.printLog(" time zone time "+OurDate);
+        // The server returns booking time already in the correct local timezone.
+        // No UTC conversion should be performed as it causes incorrect time display.
+        if (OurDate == null || OurDate.isEmpty()) {
+            return "00-00-0000 00:00";
         }
-        catch (Exception e)
-        {
-            com.karru.utility.Utility.printLog(" time zone format "+e);
-            OurDate = "00-00-0000 00:00";
-        }
+        com.karru.utility.Utility.printLog(" time zone time "+OurDate);
         return OurDate;
     }
 

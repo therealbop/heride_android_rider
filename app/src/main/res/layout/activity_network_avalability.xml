@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/no_network"
-            android:contentDescription="TODO" />
+            android:contentDescription="@string/nonetwork" />
 
         <TextView
             android:id="@+id/tv_no_internet_title"
