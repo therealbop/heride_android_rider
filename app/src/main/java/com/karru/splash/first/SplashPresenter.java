@@ -3,8 +3,12 @@ package com.karru.splash.first;
 import android.location.Location;
 
 import com.google.android.gms.common.api.Status;
-import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
+
+import androidx.annotation.NonNull;
 import com.karru.ApplicationClass;
 import com.karru.ApplicationVersion;
 import com.karru.RxAppVersionObserver;
@@ -131,8 +135,22 @@ public class SplashPresenter implements SplashContract.Presenter
     @Override
     public void generateFCMPushToken()
     {
-        String token = FirebaseInstanceId.getInstance().getToken();
-        preferencesHelperData.setFCMRegistrationId(token);
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            Utility.printLog(TAG + " Fetching FCM registration token failed: " + task.getException());
+                            return;
+                        }
+                        // Get new FCM registration token
+                        String token = task.getResult();
+                        if (token != null) {
+                            preferencesHelperData.setFCMRegistrationId(token);
+                            Utility.printLog(TAG + " FCM Token: " + token);
+                        }
+                    }
+                });
     }
 
     /**

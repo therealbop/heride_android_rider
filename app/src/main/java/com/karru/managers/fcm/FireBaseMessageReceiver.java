@@ -26,8 +26,10 @@ import com.karru.landing.MainActivity;
 import com.karru.landing.home.model.BookingDetailsDataModel;
 import com.karru.booking_flow.ride.live_tracking.view.LiveTrackingActivity;
 import com.karru.utility.Utility;
+import com.appsflyer.AppsFlyerLib;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.karru.data.source.local.shared_preference.PreferenceHelperDataSource;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -61,6 +63,24 @@ public class FireBaseMessageReceiver extends FirebaseMessagingService{
             //sendNotification(remoteMessage.getData());
             displayCustomNotification(remoteMessage.getData());
         }
+    }
+
+    /**
+     * Called when FCM token is updated. This may occur if the security of
+     * the previous token had been compromised or when token is initially generated.
+     * @param token The new token
+     */
+    @Override
+    public void onNewToken(String token) {
+        super.onNewToken(token);
+        Utility.printLog(TAG + " Refreshed FCM token: " + token);
+
+        // Store the token in SharedPreferences
+        PreferenceHelperDataSource preferenceHelper = new PreferenceHelperDataSource(getApplicationContext());
+        preferenceHelper.setFCMRegistrationId(token);
+
+        // Pass the token to AppsFlyer SDK for attribution tracking
+        AppsFlyerLib.getInstance().updateServerUninstallToken(getApplicationContext(), token);
     }
 
     private void displayCustomNotification(Map<String, String> pushData)
@@ -176,11 +196,11 @@ public class FireBaseMessageReceiver extends FirebaseMessagingService{
                 try
                 {
                     pendingIntent =
-                            taskStackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+                            taskStackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
                 }
                 catch (IllegalStateException e)
                 {
-                    pendingIntent = PendingIntent.getActivity(this, 1251, notificationIntent, PendingIntent.FLAG_ONE_SHOT);
+                    pendingIntent = PendingIntent.getActivity(this, 1251, notificationIntent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_IMMUTABLE);
                 }
 
                 builder.setContentTitle(title)
@@ -203,12 +223,19 @@ public class FireBaseMessageReceiver extends FirebaseMessagingService{
                 notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 try
                 {
-                    pendingIntent =
-                            taskStackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+                    int flags = PendingIntent.FLAG_UPDATE_CURRENT;
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        flags |= PendingIntent.FLAG_IMMUTABLE;
+                    }
+                    pendingIntent = taskStackBuilder.getPendingIntent(0, flags);
                 }
                 catch (IllegalStateException e)
                 {
-                    pendingIntent = PendingIntent.getActivity(this, 1251, notificationIntent, PendingIntent.FLAG_ONE_SHOT);
+                    int flags = PendingIntent.FLAG_ONE_SHOT;
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        flags |= PendingIntent.FLAG_IMMUTABLE;
+                    }
+                    pendingIntent = PendingIntent.getActivity(this, 1251, notificationIntent, flags);
                 }
 
                 Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);

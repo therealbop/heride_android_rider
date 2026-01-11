@@ -207,13 +207,6 @@
             </intent-filter>
         </service>
         <service
-            android:name="com.karru.managers.fcm.FireBaseInstanceIDService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-        <service
             android:name="com.karru.managers.account.AppAuthenticatorService"
             android:exported="true">
             <intent-filter>
