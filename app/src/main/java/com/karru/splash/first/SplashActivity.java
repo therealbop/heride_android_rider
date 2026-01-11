@@ -24,7 +24,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.google.android.gms.common.api.Status;
 import com.karru.authentication.login.LoginActivity;
 import com.karru.authentication.signup.SignUpActivity;
@@ -56,7 +56,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import dagger.android.support.DaggerAppCompatActivity;
-import io.fabric.sdk.android.Fabric;
 
 import static com.karru.utility.Constants.ADVERTISE_DETAILS;
 import static com.karru.utility.Constants.LANGUAGE;
@@ -116,7 +115,8 @@ public class SplashActivity extends DaggerAppCompatActivity implements SplashCon
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
+        // Firebase Crashlytics initializes automatically
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
         getWindow().setBackgroundDrawable(splash);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);

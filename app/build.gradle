@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     signingConfigs {
@@ -95,10 +95,12 @@ final daggerVersion = '2.21'
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation('com.crashlytics.sdk.android:crashlytics:2.9.7@aar') {
-        exclude group: 'com.android.support', module: 'support-annotations'
-        transitive = true;
-    }
+
+    // Firebase Crashlytics (replaces deprecated Fabric Crashlytics)
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
     implementation 'com.twilio:voice-android:5.7.2'
     implementation 'com.github.livechat:chat-window-android:v2.0.3'
     implementation 'androidx.multidex:multidex:2.0.1'
@@ -109,7 +111,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:21.0.1'
     implementation 'com.google.android.gms:play-services-gcm:17.0.0'
     implementation 'com.google.android.gms:play-services-auth:20.7.0'
-    implementation 'com.google.firebase:firebase-messaging:23.3.1'
+    implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.android.gms:play-services-places:17.0.0'
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'

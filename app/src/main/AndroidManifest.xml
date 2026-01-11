@@ -148,9 +148,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/MAP_KEY" />
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="0b18d54b1af7d997774b3b5479677ed78b8248fb" />
 
         <activity
             android:name="com.karru.booking_flow.address.view.AddressSelectionActivity"
