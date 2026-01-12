@@ -135,22 +135,27 @@ public class SplashPresenter implements SplashContract.Presenter
     @Override
     public void generateFCMPushToken()
     {
-        FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(new OnCompleteListener<String>() {
-                    @Override
-                    public void onComplete(@NonNull Task<String> task) {
-                        if (!task.isSuccessful()) {
-                            Utility.printLog(TAG + " Fetching FCM registration token failed: " + task.getException());
-                            return;
+        try {
+            FirebaseMessaging.getInstance().getToken()
+                    .addOnCompleteListener(new OnCompleteListener<String>() {
+                        @Override
+                        public void onComplete(@NonNull Task<String> task) {
+                            if (!task.isSuccessful()) {
+                                Utility.printLog(TAG + " Fetching FCM registration token failed: " + task.getException());
+                                return;
+                            }
+                            // Get new FCM registration token
+                            String token = task.getResult();
+                            if (token != null) {
+                                preferencesHelperData.setFCMRegistrationId(token);
+                                Utility.printLog(TAG + " FCM Token: " + token);
+                            }
                         }
-                        // Get new FCM registration token
-                        String token = task.getResult();
-                        if (token != null) {
-                            preferencesHelperData.setFCMRegistrationId(token);
-                            Utility.printLog(TAG + " FCM Token: " + token);
-                        }
-                    }
-                });
+                    });
+        } catch (Exception e) {
+            // Firebase may not be available in all configurations
+            Utility.printLog(TAG + " Firebase not available: " + e.getMessage());
+        }
     }
 
     /**

@@ -115,8 +115,13 @@ public class SplashActivity extends DaggerAppCompatActivity implements SplashCon
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        // Firebase Crashlytics initializes automatically
-        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
+        // Firebase Crashlytics initializes automatically - wrap in try-catch for safety
+        try {
+            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
+        } catch (Exception e) {
+            // Firebase may not be available in all configurations
+            e.printStackTrace();
+        }
         getWindow().setBackgroundDrawable(splash);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);

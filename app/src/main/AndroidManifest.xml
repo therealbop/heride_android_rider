@@ -39,6 +39,12 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <!-- Required for Android 12+ foreground services -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:name="com.karru.ApplicationClass"
         android:allowBackup="false"
@@ -223,11 +229,13 @@
             android:resource="@drawable/notification_logo" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorPrimary" /> <!-- Mqtt Service -->
+            android:resource="@color/colorPrimary" />
+        <!-- Mqtt Service -->
         <service
             android:name="org.eclipse.paho.android.service.MqttService"
             android:enabled="true"
             android:exported="false"
+            android:foregroundServiceType="dataSync"
             android:stopWithTask="true" />
 
         <activity
